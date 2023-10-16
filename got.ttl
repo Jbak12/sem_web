@@ -1,0 +1,169 @@
+@base <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://www.perceive.net/schemas/relationship/> .
+
+<Status>
+
+<#Cathelyn_Stark>
+    <Status> "alive";
+    rel:marriedTo <#Ned_Stark> ;
+    rel:siblingOf <#Lysa_Aryn> ;
+    a foaf:Person ;   
+    foaf:name "Cathelyn Stark" .
+
+<#Ned_Stark>
+    <Sta
+    rel:marriedTo <#Cathelyn_Stark> ;
+    a foaf:Person ; # a - jest typu
+    foaf:name "Ned Stark" .
+
+<#Benjen_Stark>
+    rel:friendOf <#Jon_Snow>;
+    rel:siblingOf <#Ned_Stark>;
+    a foaf:Person ;
+    foaf:name "Benjen Stark" .
+
+<#Jeor_Mormont>
+    rel:commanderOf <#Jon_Snow>;
+    rel:commanderOf <#Samwell_Tarly>;
+    rel:commanderOf <#Benjen_Stark>;
+    a foaf:Person ;
+    foaf:name "Jeor Mormont" .
+
+<#Petyr_LittleFinger>
+    rel:exLoverOf <#Cathelyn_Stark> ;
+    rel:exLoverOf <#Sansa_Stark> ;
+    rel:marriedTo <#Lysa_Aryn> ;
+    rel:masterOfCoin <#Robert_Baratheon> ;
+    a foaf:Person ;
+    foaf:name "Petyr LittleFinger" .
+
+<#Lysa_Aryn>
+    rel:siblingOf <#Cathelyn_Stark> ;
+    rel:marriedTo <#Petyr_LittleFinger> ;
+    a foaf:Person ;
+    foaf:name "Lysa Aryn" .
+
+<#Rob_Stark>
+    rel:kidOf <#Ned_Stark>;
+    rel:kidOf <#Cathelyn_Stark>;
+    a foaf:Person;
+    foaf:name "Rob Stark" .
+
+<#Arya_Stark>
+    rel:kidOf <#Ned_Stark>;
+    rel:kidOf <#Cathelyn_Stark>;
+    a foaf:Person;
+    foaf:name "Arya Stark".
+    
+<#Sansa_Stark>
+    rel:exSpouseOf <#Tyrion_Lannister>;
+    rel:exFianceeOf <#Joffrey_Baratheon>;
+    rel:kidOf <#Ned_Stark>;
+    rel:kidOf <#Cathelyn_Stark>;
+    a foaf:Person;
+    foaf:name "Sansa Stark".
+
+<#Rickon_Stark>
+    rel:kidOf <#Ned_Stark>;
+    rel:kidOf <#Cathelyn_Stark>;
+    a foaf:Person;
+    foaf:name "Rickon Stark" .
+        
+<#Bran_Stark>
+    rel:kidOf <#Ned_Stark>;
+    rel:kidOf <#Cathelyn_Stark>;
+    a foaf:Person;
+    foaf:name "Bran Stark".
+
+<#Jon_Snow>
+    rel:stepSonOf <#Ned_Stark>;
+    rel:stepSon <#Cathelyn_Stark>;
+    rel:nephewOf <#Ned_Stark>;
+    rel:kills <Daenerys_Targaryen>;
+    rel:inLoveWith <Daenerys_Targaryen>;
+    rel:nephewOf <Daenerys_Targaryen>;
+    a foaf:Person;
+    foaf:name "Jon Stark".
+    
+<#Night_King>
+    rel:enemyOf <#Bran_Stark>;
+    rel:killedBy <#Arya_Stark>;
+    a foaf:Person ;
+    foaf:name "Night King" .
+
+<#Hodor>
+    rel:servantOf <#Bran_Stark>;
+    rel:killedBy <#Night_King>;
+    a foaf:Person ;
+    foaf:name "Hodor" .
+
+<#Samwell_Tarly>
+    rel:friendOf <#Jon_Snow>;
+    rel:killedBy <#Night_King>;
+    a foaf:Person ;
+    foaf:name "Samwell Tarly" .
+
+<#The_Hound>
+    rel:friendOf <#Arya_Stark>;
+    rel:servantOf <#Joffrey_Baratheon>;
+    a foaf:Person;
+    foaf:name "The Hound" .
+
+<#Daenerys_Targaryen>
+    rel:siblingOf <Viserys_Targaryen>;
+    rel:marriedTo <Khal_Drogo>;
+    a foaf:Person;
+    foaf:name "Daenerys Targaryen" 
+
+<#Khal_Drogo>
+    rel:marriedTo<Daenerys_Targaryen>
+    a foaf: Person;
+    foaf:name "Khal Drogo" .
+
+<#Viserys_Targaryen>
+    a foaf:Person;
+    foaf:name "Viserys Targaryen".
+    
+<#Joffrey_Baratheon>
+    rel:marriedTo <#Margery_Tyrell>;
+    rel:kidOf <#Robert_Baratheon>;
+    rel:exFianceeOf <#Sansa_Stark>;
+    a foaf:Person ;
+    foaf:name "Joffrey Baratheon" .
+
+<#Robert_Baratheon>
+    rel:marriedTo <#Cersei_Lannister>;
+    rel:friendOf <#Ned_Stark>;
+    a foaf:Person ;
+    foaf:name "Robert Baratheon" .
+
+<#Gendry>
+    rel:friendOf <#Arya_Stark>;
+    rel:kidOf <#Robert_Baratheon>;
+    a foaf:Person ;
+    foaf:name "Gendry" .
+
+<#Cersei_Lannister>
+    rel:marriedTo <#Robert_Baratheon>;
+    rel:lover <#Jamie_Lannister>;
+    rel:siblingOf <#Jamie_Lannister>;
+    rel:siblingOf <#Tyrion_Lannister>;
+    a foaf:Person ;
+    foaf:name "Cersei Lannister" .
+
+<#Jamie_Lannister>
+    rel:lover <#Cersei_Lannister>;
+    rel:siblingOf <#Cersei_Lannister>;
+    rel:siblingOf <#Tyrion_Lannister>;
+    a foaf:Person ;
+    foaf:name "Jamie Lannister" .
+
+<#Tyrion_Lannister>
+    rel:exSpouseOf <#Sansa_Stark>;
+    rel:siblingOf <#Cersei_Lannister>;
+    rel:siblingOf <#Jamie_Lannister>;
+    a foaf:Person ;
+    foaf:name "Tyrion_Lannister" .
