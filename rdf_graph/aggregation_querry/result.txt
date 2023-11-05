@@ -1,0 +1,5 @@
+"Masovian Voivodeship"@en	34
+"Greater Poland Voivodeship"@en	28
+"Lower Silesian Voivodeship"@en	22
+"Subcarpathian Voivodeship"@en	21
+"Łódź Voivodeship"@en	20
