@@ -18,7 +18,7 @@ rel:composedOf
     rdfs:range  rdf:List, rdfs:Container .
 
 <#Catelyn_Stark>
-    <Status> "dead";
+    foaf:isAlive "false"^^xsd:boolean ;
     rel:marriedTo <#Ned_Stark> ;
     rel:siblingOf <#Lysa_Aryn> ;
     a foaf:Person, type:Noble ;
@@ -29,7 +29,7 @@ rel:composedOf
     rel:belongs <Stark> .
 
 <#Ned_Stark>
-    <Status> "dead";
+    foaf:isAlive "false"^^xsd:boolean ;
     rel:marriedTo <#Catelyn_Stark> ;
     a foaf:Person, type:Noble ; #a - jest typu
     foaf:age "40"^^xsd:decimal ;
@@ -39,7 +39,7 @@ rel:composedOf
     rel:belongs <Stark> .
 
 <#Benjen_Stark>
-    <Status> "dead";
+    foaf:isAlive "false"^^xsd:boolean ;
     rel:friendOf <#Jon_Snow>;
     rel:siblingOf <#Ned_Stark>;
     a foaf:Person, type:Noble ;
@@ -49,7 +49,7 @@ rel:composedOf
     rel:belongs <Stark> .
 
 <#Jeor_Mormont>
-    <Status> "dead";
+    foaf:isAlive "false"^^xsd:boolean ;
     rel:commanderOf <#Jon_Snow>;
     rel:commanderOf <#Samwell_Tarly>;
     rel:commanderOf <#Benjen_Stark>;
@@ -60,7 +60,7 @@ rel:composedOf
     rel:belongs <Other> .
 
 <#Petyr_LittleFinger>
-    <Status> "dead";
+    foaf:isAlive "false"^^xsd:boolean ;
     rel:exLoverOf <#Catelyn_Stark> ;
     rel:exLoverOf <#Sansa_Stark> ;
     rel:marriedTo <#Lysa_Aryn> ;
@@ -72,7 +72,7 @@ rel:composedOf
     rel:belongs <Other> .
 
 <#Lysa_Aryn>
-    <Status> "dead";
+    foaf:isAlive "false"^^xsd:boolean ;
     rel:siblingOf <#Catelyn_Stark> ;
     rel:marriedTo <#Petyr_LittleFinger> ;
     a foaf:Person, type:Noble ;
@@ -82,7 +82,7 @@ rel:composedOf
     rel:belongs <Other> .
 
 <#Rob_Stark>
-    <Status> "dead";
+    foaf:isAlive "false"^^xsd:boolean ;
     rel:kidOf <#Ned_Stark>;
     rel:kidOf <#Catelyn_Stark>;
     a foaf:Person, type:Noble;
@@ -93,7 +93,7 @@ rel:composedOf
     rel:belongs <Stark> .
 
 <#Arya_Stark>
-    <Status> "alive";
+    foaf:isAlive "true"^^xsd:boolean ;
     rel:kidOf <#Ned_Stark>;
     rel:kidOf <#Catelyn_Stark>;
     a foaf:Person, type:Noble;
@@ -104,7 +104,7 @@ rel:composedOf
     rel:belongs <Stark>.
     
 <#Sansa_Stark>
-    <Status> "alive";
+    foaf:isAlive "true"^^xsd:boolean ;
     rel:exSpouseOf <#Tyrion_Lannister>;
     rel:exFianceeOf <#Joffrey_Baratheon>;
     rel:kidOf <#Ned_Stark>;
@@ -117,7 +117,7 @@ rel:composedOf
     rel:belongs <Stark>.
 
 <#Rickon_Stark>
-    <Status> "dead";
+    foaf:isAlive "false"^^xsd:boolean ;
     rel:kidOf <#Ned_Stark>;
     rel:kidOf <#Catelyn_Stark>;
     a foaf:Person, type:Noble;
@@ -128,7 +128,7 @@ rel:composedOf
     rel:belongs <Stark> .
         
 <#Bran_Stark>
-    <Status> "dead";
+    foaf:isAlive "true"^^xsd:boolean ;
     rel:kidOf <#Ned_Stark>;
     rel:kidOf <#Catelyn_Stark>;
     a foaf:Person, type:Noble;
@@ -139,7 +139,7 @@ rel:composedOf
     rel:belongs <Stark>.
 
 <#Jon_Snow>
-    <Status> "alive";
+    foaf:isAlive "true"^^xsd:boolean ;
     rel:stepSonOf <#Ned_Stark>;
     rel:stepSon <#Catelyn_Stark>;
     rel:nephewOf <#Ned_Stark>;
@@ -154,7 +154,7 @@ rel:composedOf
     rel:belongs <Stark>.
     
 <#Night_King>
-    <Status> "dead";
+    foaf:isAlive "false"^^xsd:boolean ;
     rel:enemyOf <#Bran_Stark>;
     rel:killedBy <#Arya_Stark>;
     a foaf:Person, type:Noble ;
@@ -165,7 +165,7 @@ rel:composedOf
     rel:belongs <Other> .
 
 <#Hodor>
-    <Status> "dead";
+    foaf:isAlive "false"^^xsd:boolean ;
     rel:servantOf <#Bran_Stark>;
     rel:killedBy <#Night_King>;
     a foaf:Person, type:Peasant ;
@@ -175,7 +175,7 @@ rel:composedOf
     rel:belongs <Other> .
 
 <#Samwell_Tarly>
-    <Status> "alive";
+    foaf:isAlive "true"^^xsd:boolean ;
     rel:friendOf <#Jon_Snow>;
     rel:killedBy <#Night_King>;
     a foaf:Person, type:Noble ;
@@ -185,7 +185,7 @@ rel:composedOf
     rel:belongs <Other> .
 
 <#The_Hound>
-    <Status> "dead";
+    foaf:isAlive "false"^^xsd:boolean ;
     rel:friendOf <#Arya_Stark>;
     rel:servantOf <#Joffrey_Baratheon>;
     a foaf:Person, type:Peasant;
@@ -196,7 +196,7 @@ rel:composedOf
     rel:belongs <Other> .
 
 <#Daenerys_Targaryen>
-    <Status> "dead";
+    foaf:isAlive "false"^^xsd:boolean ;
     rel:siblingOf <#Viserys_Targaryen>;
     rel:marriedTo <#Khal_Drogo>;
     a foaf:Person, type:Noble;
@@ -207,7 +207,7 @@ rel:composedOf
     rel:belongs <Targaryen> .
 
 <#Khal_Drogo>
-    <Status> "dead";
+    foaf:isAlive "false"^^xsd:boolean ;
     rel:marriedTo <#Daenerys_Targaryen>;
     a foaf:Person, type:Noble;
     foaf:age "32"^^xsd:decimal ;
@@ -217,7 +217,7 @@ rel:composedOf
     rel:belongs <Other> .
 
 <#Viserys_Targaryen>
-    <Status> "dead";
+    foaf:isAlive "false"^^xsd:boolean ;
     a foaf:Person, type:Noble;
     foaf:age "22"^^xsd:decimal ;
     foaf:name "Viserys Targaryen";
@@ -226,7 +226,7 @@ rel:composedOf
     rel:belongs <Targaryen>.
     
 <#Joffrey_Baratheon>
-    <Status> "dead";
+    foaf:isAlive "false"^^xsd:boolean ;
     rel:marriedTo <#Margery_Tyrell>;
     rel:kidOf <#Robert_Baratheon>;
     rel:exFianceeOf <#Sansa_Stark>;
@@ -238,7 +238,7 @@ rel:composedOf
     rel:belongs <Baratheon> .
 
 <#Robert_Baratheon>
-    <Status> "dead";
+    foaf:isAlive "false"^^xsd:boolean ;
     rel:marriedTo <#Cersei_Lannister>;
     rel:friendOf <#Ned_Stark>;
     foaf:age "42"^^xsd:decimal ;
@@ -249,7 +249,7 @@ rel:composedOf
     rel:belongs <Baratheon>.
 
 <#Gendry>
-    <Status> "dead";
+    foaf:isAlive "false"^^xsd:boolean ;
     rel:friendOf <#Arya_Stark>;
     rel:kidOf <#Robert_Baratheon>;
     a foaf:Person, type:Peasant;
@@ -260,7 +260,7 @@ rel:composedOf
     rel:belongs <Other> .
 
 <#Cersei_Lannister>
-    <Status> "dead";
+    foaf:isAlive "false"^^xsd:boolean ;
     rel:marriedTo <#Robert_Baratheon>;
     rel:lover <#Jamie_Lannister>;
     rel:siblingOf <#Jamie_Lannister>;
@@ -273,7 +273,7 @@ rel:composedOf
     rel:belongs <Lannister> .
 
 <#Jamie_Lannister>
-    <Status> "dead";
+    foaf:isAlive "false"^^xsd:boolean ;
     rel:lover <#Cersei_Lannister>;
     rel:siblingOf <#Cersei_Lannister>;
     rel:siblingOf <#Tyrion_Lannister>;
@@ -285,7 +285,7 @@ rel:composedOf
     rel:belongs <Lannister> .
 
 <#Tyrion_Lannister>
-    <Status> "alive";
+    foaf:isAlive "true"^^xsd:boolean ;
     rel:exSpouseOf <#Sansa_Stark>;
     rel:siblingOf <#Cersei_Lannister>;
     rel:siblingOf <#Jamie_Lannister>;
