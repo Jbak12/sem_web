@@ -1,0 +1,8 @@
+BASE <http://uri/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rel: <http://www.perceive.net/schemas/relationship/>
+
+ASK { 
+    ?x foaf:age  40 ;
+       rel:belongs  <Stark> .
+}
