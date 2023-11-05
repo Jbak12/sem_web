@@ -12,6 +12,11 @@ rel:belongs
     rdfs:domain type:Person ;
     rdfs:range  type:House .
 
+rel:composedOf
+    a           rdfs:Property ;
+    rdfs:domain type:House ;
+    rdfs:range  rdf:List, rdfs:Container .
+
 <#Cathelyn_Stark>
     <Status> "dead";
     rel:marriedTo <#Ned_Stark> ;
@@ -228,41 +233,41 @@ rel:belongs
     rdf:name     "Stark"^^xsd:string ;
     rdfs:label   "Stark" ;
     rdfs:comment "The royal house of the Kingdom of the North." ;
-    rel:belongs  <Houses_of_Westeros> .
+    rel:belongs  <Westeros> .
 
 <Lannister>
     a            type:House ;
     rdf:name     "Lannister"^^xsd:string ;
     rdfs:label   "Lannister" ;
     rdfs:comment "The Lannisters rule over the Westerlands. " ;
-    rel:belongs  <Houses_of_Westeros> .
+    rel:belongs  <Westeros> .
 
 <Baratheon>
     a            type:House ;
     rdf:name     "Baratheon"^^xsd:string ;
     rdfs:label   "Baratheon" ;
     rdfs:comment "Traditionally rules the Stormlands on the eastern coast of Westeros" ;
-    rel:belongs  <Houses_of_Westeros> .
+    rel:belongs  <Westeros> .
 
 <Targaryen>
     a            type:House ;
     rdf:name     "Targaryen"^^xsd:string ;
     rdfs:label   "Targaryen" ;
     rdfs:comment "It is an exiled Great House of Westeros and the former royal house of the Seven Kingdoms." ;
-    rel:belongs  <Houses_of_Westeros> .
+    rel:belongs  <Westeros> .
 
 <Other>
     a            type:House ;
     rdf:name     "Other"^^xsd:string ;
     rdfs:label   "Other" ;
     rdfs:comment "Rest of houses of westeros combined together." ;
-    rel:belongs  <Houses_of_Westeros> .
+    rel:belongs  <Westeros> .
 
-<Houses_of_Westeros>
-    a              type:Relation ;
-    rdf:name       "Houses_of_Westeros"^^xsd:string ;
-    rel:composedOf _:houses;
-    rdfs:label     "Houses_of_Westeros".
+<Westeros>
+    a              type:Kingdom ;
+    rdf:name       "Westeros"^^xsd:string ;
+    rel:composedOf ("the crownlands" "Dorne" "the Iron Islands" "the north" "the Reach" "the riverlands" "the stormlands" "the Vale of Arryn" "the westerlands"), _:houses;
+    rdfs:label     "Westeros".
 
 _:houses
     a      rdf:Bag ;
@@ -272,10 +277,10 @@ _:houses
     rdf:_4 <Targaryen> ;
     rdf:_5 <Other> .
 
-type:Relation
+type:Kingdom
     a            rdfs:Class ;
-    rdfs:label   "Relation" ;
-    rdfs:comment "Relation defines blood relations between people that usually bear the same name." .
+    rdfs:label   "Kingdom" ;
+    rdfs:comment "Kingdom defines a part of land." .
 
 type:House
     a               rdfs:Class ;
