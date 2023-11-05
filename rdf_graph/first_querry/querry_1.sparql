@@ -1,0 +1,9 @@
+PREFIX rel: <http://www.perceive.net/schemas/relationship/> 
+PREFIX type: <http://www.perceive.net/schemas/type/> 
+
+SELECT ?who
+WHERE {
+    ?who a type:Noble .
+}
+ORDER BY ?who
+LIMIT 10
