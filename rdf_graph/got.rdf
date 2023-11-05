@@ -1,0 +1,510 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:rel="http://www.perceive.net/schemas/relationship/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:type="http://www.perceive.net/schemas/type/">
+  <rdfs:Class rdf:about="http://www.perceive.net/schemas/type/Noble">
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:label>Noble</rdfs:label>
+    <rdfs:comment>Nobles held positions of authority and power in society.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.perceive.net/schemas/type/Kingdom">
+    <rdfs:label>Kingdom</rdfs:label>
+    <rdfs:comment>Kingdom defines a part of land.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.perceive.net/schemas/type/Peasant">
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:label>Peasant</rdfs:label>
+    <rdfs:comment>Peasants were at the lower end of the social hierarchy and had limited rights and autonomy.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.perceive.net/schemas/type/House">
+    <rdfs:subClassOf rdf:resource="http://www.perceive.net/schemas/type/Relation"/>
+    <rdfs:label>House</rdfs:label>
+    <rdfs:comment>House is one of the Houses of Westeros.</rdfs:comment>
+  </rdfs:Class>
+  <type:Noble rdf:about="http://uri/#Rickon_Stark">
+    <rel:belongs>
+      <type:House rdf:about="http://uri/Stark">
+        <rdf:name>Stark</rdf:name>
+        <rdfs:label>Stark</rdfs:label>
+        <rdfs:comment>The royal house of the Kingdom of the North.</rdfs:comment>
+        <rel:belongs>
+          <type:Kingdom rdf:about="http://uri/Westeros">
+            <rdf:name>Westeros</rdf:name>
+            <rel:composedOf rdf:parseType="Resource">
+              <rdf:first>the crownlands</rdf:first>
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:first>Dorne</rdf:first>
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:first>the Iron Islands</rdf:first>
+                  <rdf:rest rdf:parseType="Resource">
+                    <rdf:first>the north</rdf:first>
+                    <rdf:rest rdf:parseType="Resource">
+                      <rdf:first>the Reach</rdf:first>
+                      <rdf:rest rdf:parseType="Resource">
+                        <rdf:first>the riverlands</rdf:first>
+                        <rdf:rest rdf:parseType="Resource">
+                          <rdf:first>the stormlands</rdf:first>
+                          <rdf:rest rdf:parseType="Resource">
+                            <rdf:first>the Vale of Arryn</rdf:first>
+                            <rdf:rest rdf:parseType="Resource">
+                              <rdf:first>the westerlands</rdf:first>
+                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:rest>
+                          </rdf:rest>
+                        </rdf:rest>
+                      </rdf:rest>
+                    </rdf:rest>
+                  </rdf:rest>
+                </rdf:rest>
+              </rdf:rest>
+            </rel:composedOf>
+            <rel:composedOf>
+              <rdf:Bag>
+                <rdf:li rdf:resource="http://uri/Stark"/>
+                <rdf:li>
+                  <type:House rdf:about="http://uri/Lannister">
+                    <rdf:name>Lannister</rdf:name>
+                    <rdfs:label>Lannister</rdfs:label>
+                    <rdfs:comment>The Lannisters rule over the Westerlands. </rdfs:comment>
+                    <rel:belongs rdf:resource="http://uri/Westeros"/>
+                  </type:House>
+                </rdf:li>
+                <rdf:li>
+                  <type:House rdf:about="http://uri/Baratheon">
+                    <rdf:name>Baratheon</rdf:name>
+                    <rdfs:label>Baratheon</rdfs:label>
+                    <rdfs:comment>Traditionally rules the Stormlands on the eastern coast of Westeros</rdfs:comment>
+                    <rel:belongs rdf:resource="http://uri/Westeros"/>
+                  </type:House>
+                </rdf:li>
+                <rdf:li>
+                  <type:House rdf:about="http://uri/Targaryen">
+                    <rdf:name>Targaryen</rdf:name>
+                    <rdfs:label>Targaryen</rdfs:label>
+                    <rdfs:comment>It is an exiled Great House of Westeros and the former royal house of the Seven Kingdoms.</rdfs:comment>
+                    <rel:belongs rdf:resource="http://uri/Westeros"/>
+                  </type:House>
+                </rdf:li>
+                <rdf:li>
+                  <type:House rdf:about="http://uri/Other">
+                    <rdf:name>Other</rdf:name>
+                    <rdfs:label>Other</rdfs:label>
+                    <rdfs:comment>Rest of houses of westeros combined together.</rdfs:comment>
+                    <rel:belongs rdf:resource="http://uri/Westeros"/>
+                  </type:House>
+                </rdf:li>
+              </rdf:Bag>
+            </rel:composedOf>
+            <rdfs:label>Westeros</rdfs:label>
+          </type:Kingdom>
+        </rel:belongs>
+      </type:House>
+    </rel:belongs>
+    <foaf:name>Rickon Stark</foaf:name>
+    <foaf:year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >295</foaf:year_of_birth>
+    <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</foaf:isAlive>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Rickon_Stark"/>
+    <rel:kidOf>
+      <foaf:Person rdf:about="http://uri/#Ned_Stark">
+        <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >40</foaf:age>
+        <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</foaf:isAlive>
+        <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Ned_Stark"/>
+        <rdf:type rdf:resource="http://www.perceive.net/schemas/type/Noble"/>
+        <foaf:name>Ned Stark</foaf:name>
+        <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Ned_Stark"/>
+        <foaf:year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+        >263</foaf:year_of_birth>
+        <rel:marriedTo>
+          <type:Noble rdf:about="http://uri/#Catelyn_Stark">
+            <rel:marriedTo rdf:resource="http://uri/#Ned_Stark"/>
+            <rel:belongs rdf:resource="http://uri/Stark"/>
+            <foaf:year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+            >264</foaf:year_of_birth>
+            <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</foaf:isAlive>
+            <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Catelyn_Stark"/>
+            <foaf:name>Catelyn Stark</foaf:name>
+            <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+            >40</foaf:age>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            <rel:siblingOf>
+              <type:Noble rdf:about="http://uri/#Lysa_Aryn">
+                <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Lysa_Aryn"/>
+                <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                >false</foaf:isAlive>
+                <foaf:name>Lysa Aryn</foaf:name>
+                <foaf:year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+                >266</foaf:year_of_birth>
+                <rel:marriedTo>
+                  <type:Noble rdf:about="http://uri/#Petyr_LittleFinger">
+                    <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                    >false</foaf:isAlive>
+                    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+                    <rel:belongs rdf:resource="http://uri/Other"/>
+                    <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Petyr_Baelish"/>
+                    <rel:exLoverOf>
+                      <foaf:Person rdf:about="http://uri/#Sansa_Stark">
+                        <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+                        >13</foaf:age>
+                        <foaf:year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+                        >286</foaf:year_of_birth>
+                        <rdf:type rdf:resource="http://www.perceive.net/schemas/type/Noble"/>
+                        <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Sansa_Stark"/>
+                        <rel:belongs rdf:resource="http://uri/Stark"/>
+                        <foaf:name>Sansa Stark</foaf:name>
+                        <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Sansa_Stark"/>
+                        <rel:kidOf rdf:resource="http://uri/#Ned_Stark"/>
+                        <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</foaf:isAlive>
+                        <rel:exFianceeOf>
+                          <type:Noble rdf:about="http://uri/#Joffrey_Baratheon">
+                            <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Joffrey_Baratheon"/>
+                            <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Joffrey_Baratheon"/>
+                            <rel:kidOf>
+                              <type:Noble rdf:about="http://uri/#Robert_Baratheon">
+                                <rel:belongs rdf:resource="http://uri/Baratheon"/>
+                                <foaf:year_of_birth rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#gYear"
+                                >263</foaf:year_of_birth>
+                                <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+                                >42</foaf:age>
+                                <rel:marriedTo>
+                                  <foaf:Person rdf:about="http://uri/#Cersei_Lannister">
+                                    <rel:siblingOf>
+                                      <foaf:Person rdf:about="http://uri/#Jamie_Lannister">
+                                        <foaf:name>Jamie Lannister</foaf:name>
+                                        <foaf:year_of_birth rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#gYear"
+                                        >261</foaf:year_of_birth>
+                                        <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Jamie_Lannister"/>
+                                        <rel:siblingOf>
+                                          <foaf:Person rdf:about="http://uri/#Tyrion_Lannister">
+                                            <rel:belongs rdf:resource="http://uri/Lannister"/>
+                                            <rel:siblingOf rdf:resource="http://uri/#Jamie_Lannister"/>
+                                            <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Tyrion_Lannister"/>
+                                            <foaf:isAlive rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#boolean"
+                                            >true</foaf:isAlive>
+                                            <foaf:name>Tyrion_Lannister</foaf:name>
+                                            <foaf:age rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#decimal"
+                                            >32</foaf:age>
+                                            <foaf:year_of_birth
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+                                            >265</foaf:year_of_birth>
+                                            <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Tyrion_Lannister"/>
+                                            <rel:exSpouseOf rdf:resource="http://uri/#Sansa_Stark"/>
+                                            <rdf:type rdf:resource="http://www.perceive.net/schemas/type/Noble"/>
+                                            <rel:siblingOf rdf:resource="http://uri/#Cersei_Lannister"/>
+                                          </foaf:Person>
+                                        </rel:siblingOf>
+                                        <rel:siblingOf rdf:resource="http://uri/#Cersei_Lannister"/>
+                                        <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Jamie_Lannister"/>
+                                        <rdf:type rdf:resource="http://www.perceive.net/schemas/type/Noble"/>
+                                        <rel:belongs rdf:resource="http://uri/Lannister"/>
+                                        <rel:lover rdf:resource="http://uri/#Cersei_Lannister"/>
+                                        <foaf:isAlive rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#boolean"
+                                        >false</foaf:isAlive>
+                                        <foaf:age rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#decimal"
+                                        >36</foaf:age>
+                                      </foaf:Person>
+                                    </rel:siblingOf>
+                                    <rel:lover rdf:resource="http://uri/#Jamie_Lannister"/>
+                                    <rel:belongs rdf:resource="http://uri/Lannister"/>
+                                    <foaf:isAlive rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >false</foaf:isAlive>
+                                    <foaf:name>Cersei Lannister</foaf:name>
+                                    <rel:marriedTo rdf:resource="http://uri/#Robert_Baratheon"/>
+                                    <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Cersei_Lannister"/>
+                                    <rdf:type rdf:resource="http://www.perceive.net/schemas/type/Noble"/>
+                                    <rel:siblingOf rdf:resource="http://uri/#Tyrion_Lannister"/>
+                                    <foaf:year_of_birth rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#gYear"
+                                    >266</foaf:year_of_birth>
+                                    <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+                                    >36</foaf:age>
+                                    <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Cersei_Lannister"/>
+                                  </foaf:Person>
+                                </rel:marriedTo>
+                                <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+                                <foaf:name>Robert Baratheon</foaf:name>
+                                <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Robert_Baratheon"/>
+                                <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Robert_Baratheon"/>
+                                <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                                >false</foaf:isAlive>
+                                <rel:friendOf rdf:resource="http://uri/#Ned_Stark"/>
+                              </type:Noble>
+                            </rel:kidOf>
+                            <rel:belongs rdf:resource="http://uri/Baratheon"/>
+                            <foaf:name>Joffrey Baratheon</foaf:name>
+                            <rel:marriedTo rdf:resource="http://uri/#Margery_Tyrell"/>
+                            <rel:exFianceeOf rdf:resource="http://uri/#Sansa_Stark"/>
+                            <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+                            >16</foaf:age>
+                            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+                            <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                            >false</foaf:isAlive>
+                            <foaf:year_of_birth rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#gYear"
+                            >282</foaf:year_of_birth>
+                          </type:Noble>
+                        </rel:exFianceeOf>
+                        <rel:kidOf rdf:resource="http://uri/#Catelyn_Stark"/>
+                        <rel:exSpouseOf rdf:resource="http://uri/#Tyrion_Lannister"/>
+                      </foaf:Person>
+                    </rel:exLoverOf>
+                    <foaf:year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+                    >268</foaf:year_of_birth>
+                    <rel:marriedTo rdf:resource="http://uri/#Lysa_Aryn"/>
+                    <rel:exLoverOf rdf:resource="http://uri/#Catelyn_Stark"/>
+                    <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Petyr_Baelish"/>
+                    <foaf:name>Petyr LittleFinger</foaf:name>
+                    <rel:masterOfCoin rdf:resource="http://uri/#Robert_Baratheon"/>
+                  </type:Noble>
+                </rel:marriedTo>
+                <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+                <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Lysa_Aryn"/>
+                <rel:belongs rdf:resource="http://uri/Other"/>
+                <rel:siblingOf rdf:resource="http://uri/#Catelyn_Stark"/>
+              </type:Noble>
+            </rel:siblingOf>
+            <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Catelyn_Stark"/>
+          </type:Noble>
+        </rel:marriedTo>
+        <rel:belongs rdf:resource="http://uri/Stark"/>
+      </foaf:Person>
+    </rel:kidOf>
+    <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >6</foaf:age>
+    <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Rickon_Stark"/>
+    <rel:kidOf rdf:resource="http://uri/#Catelyn_Stark"/>
+  </type:Noble>
+  <rdfs:Property rdf:about="http://www.perceive.net/schemas/relationship/composedOf">
+    <rdfs:domain rdf:resource="http://www.perceive.net/schemas/type/House"/>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Container"/>
+  </rdfs:Property>
+  <foaf:Person rdf:about="http://uri/#Rob_Stark">
+    <rel:kidOf rdf:resource="http://uri/#Ned_Stark"/>
+    <rel:kidOf rdf:resource="http://uri/#Catelyn_Stark"/>
+    <foaf:name>Rob Stark</foaf:name>
+    <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Rob_Stark"/>
+    <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</foaf:isAlive>
+    <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >17</foaf:age>
+    <foaf:year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >283</foaf:year_of_birth>
+    <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Rob_Stark"/>
+    <rel:belongs rdf:resource="http://uri/Stark"/>
+    <rdf:type rdf:resource="http://www.perceive.net/schemas/type/Noble"/>
+  </foaf:Person>
+  <foaf:Person rdf:about="http://uri/#Jeor_Mormont">
+    <foaf:name>Jeor Mormont</foaf:name>
+    <rel:belongs rdf:resource="http://uri/Other"/>
+    <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</foaf:isAlive>
+    <rel:commanderOf>
+      <foaf:Person rdf:about="http://uri/#Jon_Snow">
+        <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Jon_Snow"/>
+        <foaf:year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+        >281</foaf:year_of_birth>
+        <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Jon_Snow"/>
+        <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >17</foaf:age>
+        <rel:kills rdf:resource="http://uri/Daenerys_Targaryen"/>
+        <rel:inLoveWith rdf:resource="http://uri/Daenerys_Targaryen"/>
+        <rel:nephewOf rdf:resource="http://uri/Daenerys_Targaryen"/>
+        <rel:stepSonOf rdf:resource="http://uri/#Ned_Stark"/>
+        <rel:belongs rdf:resource="http://uri/Stark"/>
+        <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</foaf:isAlive>
+        <rdf:type rdf:resource="http://www.perceive.net/schemas/type/Noble"/>
+        <rel:nephewOf rdf:resource="http://uri/#Ned_Stark"/>
+        <rel:stepSon rdf:resource="http://uri/#Catelyn_Stark"/>
+        <foaf:name>Jon Snow</foaf:name>
+      </foaf:Person>
+    </rel:commanderOf>
+    <rel:commanderOf>
+      <type:Noble rdf:about="http://uri/#Benjen_Stark">
+        <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Benjen_Stark"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rel:friendOf rdf:resource="http://uri/#Jon_Snow"/>
+        <rel:siblingOf rdf:resource="http://uri/#Ned_Stark"/>
+        <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Benjen_Stark"/>
+        <rel:belongs rdf:resource="http://uri/Stark"/>
+        <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</foaf:isAlive>
+        <foaf:year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+        >267</foaf:year_of_birth>
+        <foaf:name>Benjen Stark</foaf:name>
+      </type:Noble>
+    </rel:commanderOf>
+    <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Jeor_Mormont"/>
+    <foaf:year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >230</foaf:year_of_birth>
+    <rel:commanderOf>
+      <foaf:Person rdf:about="http://uri/#Samwell_Tarly">
+        <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</foaf:isAlive>
+        <foaf:year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+        >283</foaf:year_of_birth>
+        <foaf:name>Samwell Tarly</foaf:name>
+        <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Samwell_Tarly"/>
+        <rel:friendOf rdf:resource="http://uri/#Jon_Snow"/>
+        <rdf:type rdf:resource="http://www.perceive.net/schemas/type/Noble"/>
+        <rel:belongs rdf:resource="http://uri/Other"/>
+        <rel:killedBy>
+          <foaf:Person rdf:about="http://uri/#Night_King">
+            <rel:killedBy>
+              <foaf:Person rdf:about="http://uri/#Arya_Stark">
+                <foaf:year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+                >289</foaf:year_of_birth>
+                <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                >true</foaf:isAlive>
+                <rel:belongs rdf:resource="http://uri/Stark"/>
+                <foaf:name>Arya Stark</foaf:name>
+                <rel:kidOf rdf:resource="http://uri/#Ned_Stark"/>
+                <rel:kidOf rdf:resource="http://uri/#Catelyn_Stark"/>
+                <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Arya_Stark"/>
+                <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+                >11</foaf:age>
+                <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Arya_Stark"/>
+                <rdf:type rdf:resource="http://www.perceive.net/schemas/type/Noble"/>
+              </foaf:Person>
+            </rel:killedBy>
+            <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Night_King"/>
+            <rel:enemyOf>
+              <foaf:Person rdf:about="http://uri/#Bran_Stark">
+                <rel:kidOf rdf:resource="http://uri/#Ned_Stark"/>
+                <rel:kidOf rdf:resource="http://uri/#Catelyn_Stark"/>
+                <rel:belongs rdf:resource="http://uri/Stark"/>
+                <foaf:year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+                >290</foaf:year_of_birth>
+                <rdf:type rdf:resource="http://www.perceive.net/schemas/type/Noble"/>
+                <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                >true</foaf:isAlive>
+                <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+                >10</foaf:age>
+                <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Bran_Stark"/>
+                <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Bran_Stark"/>
+                <foaf:name>Bran Stark</foaf:name>
+              </foaf:Person>
+            </rel:enemyOf>
+            <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+            >10.000</foaf:age>
+            <rdf:type rdf:resource="http://www.perceive.net/schemas/type/Noble"/>
+            <foaf:name>Night King</foaf:name>
+            <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Night_King"/>
+            <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</foaf:isAlive>
+            <rel:belongs rdf:resource="http://uri/Other"/>
+          </foaf:Person>
+        </rel:killedBy>
+        <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Samwell_Tarly"/>
+      </foaf:Person>
+    </rel:commanderOf>
+    <rdf:type rdf:resource="http://www.perceive.net/schemas/type/Noble"/>
+    <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Jeor_Mormont"/>
+  </foaf:Person>
+  <rdfs:Property rdf:about="http://www.perceive.net/schemas/relationship/belongs">
+    <rdfs:domain rdf:resource="http://www.perceive.net/schemas/type/Person"/>
+    <rdfs:range rdf:resource="http://www.perceive.net/schemas/type/House"/>
+  </rdfs:Property>
+  <foaf:Person rdf:about="http://uri/#Hodor">
+    <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</foaf:isAlive>
+    <rel:servantOf rdf:resource="http://uri/#Bran_Stark"/>
+    <rel:killedBy rdf:resource="http://uri/#Night_King"/>
+    <rdf:type rdf:resource="http://www.perceive.net/schemas/type/Peasant"/>
+    <foaf:name>Hodor</foaf:name>
+    <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Hodor"/>
+    <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Hodor"/>
+    <rel:belongs rdf:resource="http://uri/Other"/>
+  </foaf:Person>
+  <type:Peasant rdf:about="http://uri/#The_Hound">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:name>The Hound</foaf:name>
+    <rel:servantOf rdf:resource="http://uri/#Joffrey_Baratheon"/>
+    <foaf:year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >265</foaf:year_of_birth>
+    <rel:belongs rdf:resource="http://uri/Other"/>
+    <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/The_Hound"/>
+    <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/The_Hound"/>
+    <rel:friendOf rdf:resource="http://uri/#Arya_Stark"/>
+    <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</foaf:isAlive>
+    <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >40</foaf:age>
+  </type:Peasant>
+  <foaf:Person rdf:about="http://uri/#Gendry">
+    <foaf:name>Gendry</foaf:name>
+    <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >20</foaf:age>
+    <rel:friendOf rdf:resource="http://uri/#Arya_Stark"/>
+    <rdf:type rdf:resource="http://www.perceive.net/schemas/type/Peasant"/>
+    <rel:belongs rdf:resource="http://uri/Other"/>
+    <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</foaf:isAlive>
+    <foaf:year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >282</foaf:year_of_birth>
+    <rel:kidOf rdf:resource="http://uri/#Robert_Baratheon"/>
+    <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Gendry"/>
+    <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Gendry"/>
+  </foaf:Person>
+  <type:Noble rdf:about="http://uri/#Khal_Drogo">
+    <foaf:name>Khal Drogo</foaf:name>
+    <rel:marriedTo>
+      <foaf:Person rdf:about="http://uri/#Daenerys_Targaryen">
+        <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >16</foaf:age>
+        <foaf:year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+        >284</foaf:year_of_birth>
+        <foaf:name>Daenerys Targaryen</foaf:name>
+        <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Daenerys_Targaryen"/>
+        <rel:marriedTo rdf:resource="http://uri/#Khal_Drogo"/>
+        <rel:siblingOf>
+          <foaf:Person rdf:about="http://uri/#Viserys_Targaryen">
+            <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</foaf:isAlive>
+            <rdf:type rdf:resource="http://www.perceive.net/schemas/type/Noble"/>
+            <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+            >22</foaf:age>
+            <foaf:name>Viserys Targaryen</foaf:name>
+            <foaf:year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+            >63</foaf:year_of_birth>
+            <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Viserys_Targaryen"/>
+            <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Viserys_Targaryen"/>
+            <rel:belongs rdf:resource="http://uri/Targaryen"/>
+          </foaf:Person>
+        </rel:siblingOf>
+        <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</foaf:isAlive>
+        <rel:belongs rdf:resource="http://uri/Targaryen"/>
+        <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Daenerys_Targaryen"/>
+        <rdf:type rdf:resource="http://www.perceive.net/schemas/type/Noble"/>
+      </foaf:Person>
+    </rel:marriedTo>
+    <rdfs:isDefinedBy rdf:resource="https://en.wikipedia.org/wiki/Khal_Drogo"/>
+    <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >32</foaf:age>
+    <foaf:year_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >266</foaf:year_of_birth>
+    <foaf:isAlive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</foaf:isAlive>
+    <rdfs:seeAlso rdf:resource="https://gameofthrones.fandom.com/wiki/Khal_Drogo"/>
+    <rel:belongs rdf:resource="http://uri/Other"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </type:Noble>
+</rdf:RDF>
