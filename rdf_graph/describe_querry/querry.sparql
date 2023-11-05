@@ -1,0 +1,9 @@
+BASE <http://uri/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rel: <http://www.perceive.net/schemas/relationship/>
+
+DESCRIBE ?x 
+WHERE { 
+    ?x rel:belongs <Lannister> ;
+       foaf:isAlive false  .
+}
