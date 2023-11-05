@@ -1,0 +1,31 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rel:  <http://www.perceive.net/schemas/relationship/> .
+@prefix type: <http://www.perceive.net/schemas/type/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<http://uri/#Jamie_Lannister>
+        rdf:type            foaf:Person , type:Noble ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Jamie_Lannister> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Jamie_Lannister> ;
+        rel:belongs         <http://uri/Lannister> ;
+        rel:lover           <http://uri/#Cersei_Lannister> ;
+        rel:siblingOf       <http://uri/#Tyrion_Lannister> , <http://uri/#Cersei_Lannister> ;
+        foaf:age            "36"^^xsd:decimal ;
+        foaf:isAlive        false ;
+        foaf:name           "Jamie Lannister" ;
+        foaf:year_of_birth  "261"^^xsd:gYear .
+
+<http://uri/#Cersei_Lannister>
+        rdf:type            foaf:Person , type:Noble ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Cersei_Lannister> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Cersei_Lannister> ;
+        rel:belongs         <http://uri/Lannister> ;
+        rel:lover           <http://uri/#Jamie_Lannister> ;
+        rel:marriedTo       <http://uri/#Robert_Baratheon> ;
+        rel:siblingOf       <http://uri/#Jamie_Lannister> , <http://uri/#Tyrion_Lannister> ;
+        foaf:age            "36"^^xsd:decimal ;
+        foaf:isAlive        false ;
+        foaf:name           "Cersei Lannister" ;
+        foaf:year_of_birth  "266"^^xsd:gYear .
