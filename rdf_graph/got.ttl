@@ -22,6 +22,7 @@ rel:composedOf
     rel:marriedTo <#Ned_Stark> ;
     rel:siblingOf <#Lysa_Aryn> ;
     a foaf:Person ;
+    foaf:age "40"^^xsd:decimal ;
     foaf:name "Cathelyn Stark";
     rel:belongs <Stark> .
 
@@ -29,6 +30,7 @@ rel:composedOf
     <Status> "dead";
     rel:marriedTo <#Cathelyn_Stark> ;
     a foaf:Person ; #a - jest typu
+    foaf:age "40"^^xsd:decimal ;
     foaf:name "Ned Stark";
     rel:belongs <Stark> .
 
@@ -72,6 +74,7 @@ rel:composedOf
     rel:kidOf <#Ned_Stark>;
     rel:kidOf <#Cathelyn_Stark>;
     a foaf:Person;
+    foaf:age "17"^^xsd:decimal ;
     foaf:name "Rob Stark";
     rel:belongs <Stark> .
 
@@ -80,6 +83,7 @@ rel:composedOf
     rel:kidOf <#Ned_Stark>;
     rel:kidOf <#Cathelyn_Stark>;
     a foaf:Person;
+    foaf:age "11"^^xsd:decimal ;
     foaf:name "Arya Stark";
     rel:belongs <Stark>.
     
@@ -90,6 +94,7 @@ rel:composedOf
     rel:kidOf <#Ned_Stark>;
     rel:kidOf <#Cathelyn_Stark>;
     a foaf:Person;
+    foaf:age "13"^^xsd:decimal ;
     foaf:name "Sansa Stark";
     rel:belongs <Stark>.
 
@@ -98,6 +103,7 @@ rel:composedOf
     rel:kidOf <#Ned_Stark>;
     rel:kidOf <#Cathelyn_Stark>;
     a foaf:Person;
+    foaf:age "6"^^xsd:decimal ;
     foaf:name "Rickon Stark";
     rel:belongs <Stark> .
         
@@ -106,6 +112,7 @@ rel:composedOf
     rel:kidOf <#Ned_Stark>;
     rel:kidOf <#Cathelyn_Stark>;
     a foaf:Person;
+    foaf:age "10"^^xsd:decimal ;
     foaf:name "Bran Stark";
     rel:belongs <Stark>.
 
@@ -118,6 +125,7 @@ rel:composedOf
     rel:inLoveWith <Daenerys_Targaryen>;
     rel:nephewOf <Daenerys_Targaryen>;
     a foaf:Person;
+    foaf:age "17"^^xsd:decimal ;
     foaf:name "Jon Snow";
     rel:belongs <Stark>.
     
@@ -126,6 +134,7 @@ rel:composedOf
     rel:enemyOf <#Bran_Stark>;
     rel:killedBy <#Arya_Stark>;
     a foaf:Person ;
+    foaf:age "10.000"^^xsd:decimal ;
     foaf:name "Night King";
     rel:belongs <Other> .
 
@@ -150,6 +159,7 @@ rel:composedOf
     rel:friendOf <#Arya_Stark>;
     rel:servantOf <#Joffrey_Baratheon>;
     a foaf:Person;
+    foaf:age "40"^^xsd:decimal ;
     foaf:name "The Hound";
     rel:belongs <Other> .
 
@@ -158,6 +168,7 @@ rel:composedOf
     rel:siblingOf <#Viserys_Targaryen>;
     rel:marriedTo <#Khal_Drogo>;
     a foaf:Person;
+    foaf:age "16"^^xsd:decimal ;
     foaf:name "Daenerys Targaryen";
     rel:belongs <Targaryen> .
 
@@ -165,12 +176,14 @@ rel:composedOf
     <Status> "dead";
     rel:marriedTo <#Daenerys_Targaryen>;
     a foaf:Person;
+    foaf:age "32"^^xsd:decimal ;
     foaf:name "Khal Drogo";
     rel:belongs <Other> .
 
 <#Viserys_Targaryen>
     <Status> "dead";
     a foaf:Person;
+    foaf:age "22"^^xsd:decimal ;
     foaf:name "Viserys Targaryen";
     rel:belongs <Targaryen>.
     
@@ -179,6 +192,7 @@ rel:composedOf
     rel:marriedTo <#Margery_Tyrell>;
     rel:kidOf <#Robert_Baratheon>;
     rel:exFianceeOf <#Sansa_Stark>;
+    foaf:age "16"^^xsd:decimal ;
     a foaf:Person ;
     foaf:name "Joffrey Baratheon";
     rel:belongs <Baratheon> .
@@ -187,6 +201,7 @@ rel:composedOf
     <Status> "dead";
     rel:marriedTo <#Cersei_Lannister>;
     rel:friendOf <#Ned_Stark>;
+    foaf:age "42"^^xsd:decimal ;
     a foaf:Person ;
     foaf:name "Robert Baratheon";
     rel:belongs <Baratheon>.
@@ -196,6 +211,7 @@ rel:composedOf
     rel:friendOf <#Arya_Stark>;
     rel:kidOf <#Robert_Baratheon>;
     a foaf:Person;
+    foaf:age "20"^^xsd:decimal ;
     foaf:name "Gendry" ;
     rel:belongs <Other> .
 
@@ -206,6 +222,7 @@ rel:composedOf
     rel:siblingOf <#Jamie_Lannister>;
     rel:siblingOf <#Tyrion_Lannister>;
     a foaf:Person ;
+    foaf:age "36"^^xsd:decimal ;
     foaf:name "Cersei Lannister";
     rel:belongs <Lannister> .
 
@@ -215,6 +232,7 @@ rel:composedOf
     rel:siblingOf <#Cersei_Lannister>;
     rel:siblingOf <#Tyrion_Lannister>;
     a foaf:Person;
+    foaf:age "36"^^xsd:decimal ;
     foaf:name "Jamie Lannister";
     rel:belongs <Lannister> .
 
@@ -224,6 +242,7 @@ rel:composedOf
     rel:siblingOf <#Cersei_Lannister>;
     rel:siblingOf <#Jamie_Lannister>;
     a foaf:Person;
+    foaf:age "32"^^xsd:decimal ;
     foaf:name "Tyrion_Lannister";
     rel:belongs <Lannister>.
 
