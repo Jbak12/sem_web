@@ -313,7 +313,7 @@ rel:composedOf
     rel:siblingOf <#Jamie_Lannister>;
     a foaf:Person, type:Noble;
     foaf:age "32"^^xsd:decimal ;
-    foaf:year_of_birth "265"^^xsd:gYear ;c
+    foaf:year_of_birth "265"^^xsd:gYear ;
     foaf:name "Tyrion_Lannister";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Tyrion_Lannister>;
     rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Tyrion_Lannister>;
