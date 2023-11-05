@@ -21,7 +21,7 @@ rel:composedOf
     <Status> "dead";
     rel:marriedTo <#Ned_Stark> ;
     rel:siblingOf <#Lysa_Aryn> ;
-    a foaf:Person ;
+    a foaf:Person, type:Noble ;
     foaf:age "40"^^xsd:decimal ;
     foaf:name "Catelyn Stark";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Catelyn_Stark>;
@@ -31,7 +31,7 @@ rel:composedOf
 <#Ned_Stark>
     <Status> "dead";
     rel:marriedTo <#Catelyn_Stark> ;
-    a foaf:Person ; #a - jest typu
+    a foaf:Person, type:Noble ; #a - jest typu
     foaf:age "40"^^xsd:decimal ;
     foaf:name "Ned Stark";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Ned_Stark>;
@@ -42,7 +42,7 @@ rel:composedOf
     <Status> "dead";
     rel:friendOf <#Jon_Snow>;
     rel:siblingOf <#Ned_Stark>;
-    a foaf:Person ;
+    a foaf:Person, type:Noble ;
     foaf:name "Benjen Stark";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Benjen_Stark>;
     rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Benjen_Stark>;
@@ -53,7 +53,7 @@ rel:composedOf
     rel:commanderOf <#Jon_Snow>;
     rel:commanderOf <#Samwell_Tarly>;
     rel:commanderOf <#Benjen_Stark>;
-    a foaf:Person ;
+    a foaf:Person, type:Noble ;
     foaf:name "Jeor Mormont";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Jeor_Mormont>;
     rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Jeor_Mormont>;
@@ -65,7 +65,7 @@ rel:composedOf
     rel:exLoverOf <#Sansa_Stark> ;
     rel:marriedTo <#Lysa_Aryn> ;
     rel:masterOfCoin <#Robert_Baratheon> ;
-    a foaf:Person ;
+    a foaf:Person, type:Noble ;
     foaf:name "Petyr LittleFinger";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Petyr_Baelish>;
     rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Petyr_Baelish>;
@@ -75,7 +75,7 @@ rel:composedOf
     <Status> "dead";
     rel:siblingOf <#Catelyn_Stark> ;
     rel:marriedTo <#Petyr_LittleFinger> ;
-    a foaf:Person ;
+    a foaf:Person, type:Noble ;
     foaf:name "Lysa Aryn";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Lysa_Aryn>;
     rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Lysa_Aryn>;
@@ -85,7 +85,7 @@ rel:composedOf
     <Status> "dead";
     rel:kidOf <#Ned_Stark>;
     rel:kidOf <#Catelyn_Stark>;
-    a foaf:Person;
+    a foaf:Person, type:Noble;
     foaf:age "17"^^xsd:decimal ;
     foaf:name "Rob Stark";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Rob_Stark>;
@@ -96,7 +96,7 @@ rel:composedOf
     <Status> "alive";
     rel:kidOf <#Ned_Stark>;
     rel:kidOf <#Catelyn_Stark>;
-    a foaf:Person;
+    a foaf:Person, type:Noble;
     foaf:age "11"^^xsd:decimal ;
     foaf:name "Arya Stark";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Arya_Stark>;
@@ -109,7 +109,7 @@ rel:composedOf
     rel:exFianceeOf <#Joffrey_Baratheon>;
     rel:kidOf <#Ned_Stark>;
     rel:kidOf <#Catelyn_Stark>;
-    a foaf:Person;
+    a foaf:Person, type:Noble;
     foaf:age "13"^^xsd:decimal ;
     foaf:name "Sansa Stark";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Sansa_Stark>;
@@ -120,7 +120,7 @@ rel:composedOf
     <Status> "dead";
     rel:kidOf <#Ned_Stark>;
     rel:kidOf <#Catelyn_Stark>;
-    a foaf:Person;
+    a foaf:Person, type:Noble;
     foaf:age "6"^^xsd:decimal ;
     foaf:name "Rickon Stark";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Rickon_Stark>;
@@ -131,7 +131,7 @@ rel:composedOf
     <Status> "dead";
     rel:kidOf <#Ned_Stark>;
     rel:kidOf <#Catelyn_Stark>;
-    a foaf:Person;
+    a foaf:Person, type:Noble;
     foaf:age "10"^^xsd:decimal ;
     foaf:name "Bran Stark";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Bran_Stark>;
@@ -146,7 +146,7 @@ rel:composedOf
     rel:kills <Daenerys_Targaryen>;
     rel:inLoveWith <Daenerys_Targaryen>;
     rel:nephewOf <Daenerys_Targaryen>;
-    a foaf:Person;
+    a foaf:Person, type:Noble;
     foaf:age "17"^^xsd:decimal ;
     foaf:name "Jon Snow";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Jon_Snow>;
@@ -157,7 +157,7 @@ rel:composedOf
     <Status> "dead";
     rel:enemyOf <#Bran_Stark>;
     rel:killedBy <#Arya_Stark>;
-    a foaf:Person ;
+    a foaf:Person, type:Noble ;
     foaf:age "10.000"^^xsd:decimal ;
     foaf:name "Night King";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Night_King>;
@@ -168,7 +168,7 @@ rel:composedOf
     <Status> "dead";
     rel:servantOf <#Bran_Stark>;
     rel:killedBy <#Night_King>;
-    a foaf:Person ;
+    a foaf:Person, type:Peasant ;
     foaf:name "Hodor";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Hodor>;
     rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Hodor>;
@@ -178,7 +178,7 @@ rel:composedOf
     <Status> "alive";
     rel:friendOf <#Jon_Snow>;
     rel:killedBy <#Night_King>;
-    a foaf:Person ;
+    a foaf:Person, type:Noble ;
     foaf:name "Samwell Tarly";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Samwell_Tarly>;
     rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Samwell_Tarly>;
@@ -188,7 +188,7 @@ rel:composedOf
     <Status> "dead";
     rel:friendOf <#Arya_Stark>;
     rel:servantOf <#Joffrey_Baratheon>;
-    a foaf:Person;
+    a foaf:Person, type:Peasant;
     foaf:age "40"^^xsd:decimal ;
     foaf:name "The Hound";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/The_Hound>;
@@ -199,7 +199,7 @@ rel:composedOf
     <Status> "dead";
     rel:siblingOf <#Viserys_Targaryen>;
     rel:marriedTo <#Khal_Drogo>;
-    a foaf:Person;
+    a foaf:Person, type:Noble;
     foaf:age "16"^^xsd:decimal ;
     foaf:name "Daenerys Targaryen";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Daenerys_Targaryen>;
@@ -209,7 +209,7 @@ rel:composedOf
 <#Khal_Drogo>
     <Status> "dead";
     rel:marriedTo <#Daenerys_Targaryen>;
-    a foaf:Person;
+    a foaf:Person, type:Noble;
     foaf:age "32"^^xsd:decimal ;
     foaf:name "Khal Drogo";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Khal_Drogo>;
@@ -218,7 +218,7 @@ rel:composedOf
 
 <#Viserys_Targaryen>
     <Status> "dead";
-    a foaf:Person;
+    a foaf:Person, type:Noble;
     foaf:age "22"^^xsd:decimal ;
     foaf:name "Viserys Targaryen";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Viserys_Targaryen>;
@@ -231,7 +231,7 @@ rel:composedOf
     rel:kidOf <#Robert_Baratheon>;
     rel:exFianceeOf <#Sansa_Stark>;
     foaf:age "16"^^xsd:decimal ;
-    a foaf:Person ;
+    a foaf:Person, type:Noble ;
     foaf:name "Joffrey Baratheon";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Joffrey_Baratheon>;
     rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Joffrey_Baratheon>;
@@ -242,7 +242,7 @@ rel:composedOf
     rel:marriedTo <#Cersei_Lannister>;
     rel:friendOf <#Ned_Stark>;
     foaf:age "42"^^xsd:decimal ;
-    a foaf:Person ;
+    a foaf:Person, type:Noble ;
     foaf:name "Robert Baratheon";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Robert_Baratheon>;
     rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Robert_Baratheon>;
@@ -252,7 +252,7 @@ rel:composedOf
     <Status> "dead";
     rel:friendOf <#Arya_Stark>;
     rel:kidOf <#Robert_Baratheon>;
-    a foaf:Person;
+    a foaf:Person, type:Peasant;
     foaf:age "20"^^xsd:decimal ;
     foaf:name "Gendry" ;
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Gendry>;
@@ -265,7 +265,7 @@ rel:composedOf
     rel:lover <#Jamie_Lannister>;
     rel:siblingOf <#Jamie_Lannister>;
     rel:siblingOf <#Tyrion_Lannister>;
-    a foaf:Person ;
+    a foaf:Person, type:Noble ;
     foaf:age "36"^^xsd:decimal ;
     foaf:name "Cersei Lannister";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Cersei_Lannister>;
@@ -277,7 +277,7 @@ rel:composedOf
     rel:lover <#Cersei_Lannister>;
     rel:siblingOf <#Cersei_Lannister>;
     rel:siblingOf <#Tyrion_Lannister>;
-    a foaf:Person;
+    a foaf:Person, type:Noble;
     foaf:age "36"^^xsd:decimal ;
     foaf:name "Jamie Lannister";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Jamie_Lannister>;
@@ -289,7 +289,7 @@ rel:composedOf
     rel:exSpouseOf <#Sansa_Stark>;
     rel:siblingOf <#Cersei_Lannister>;
     rel:siblingOf <#Jamie_Lannister>;
-    a foaf:Person;
+    a foaf:Person, type:Noble;
     foaf:age "32"^^xsd:decimal ;
     foaf:name "Tyrion_Lannister";
     rdfs:seeAlso <https://gameofthrones.fandom.com/wiki/Tyrion_Lannister>;
@@ -356,3 +356,15 @@ type:House
     rdfs:subClassOf type:Relation ;
     rdfs:label      "House" ;
     rdfs:comment    "House is one of the Houses of Westeros." .
+
+type:Noble
+    a               rdfs:Class ;
+    rdfs:subClassOf foaf:Person ;
+    rdfs:label      "Noble" ;
+    rdfs:comment    "Nobles held positions of authority and power in society." .
+
+type:Peasant
+    a               rdfs:Class ;
+    rdfs:subClassOf foaf:Person ;
+    rdfs:label      "Peasant" ;
+    rdfs:comment    "Peasants were at the lower end of the social hierarchy and had limited rights and autonomy." .
