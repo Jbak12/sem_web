@@ -1,28 +1,39 @@
 @base <http://uri/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:       <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rel: <http://www.perceive.net/schemas/relationship/> .
+@prefix type: <http://www.perceive.net/schemas/type/> .
+
+
+rel:belongs
+    a           rdfs:Property ;
+    rdfs:domain type:Person ;
+    rdfs:range  type:House .
 
 <#Cathelyn_Stark>
     <Status> "dead";
     rel:marriedTo <#Ned_Stark> ;
     rel:siblingOf <#Lysa_Aryn> ;
-    a foaf:Person ;   
-    foaf:name "Cathelyn Stark" .
+    a foaf:Person ;
+    foaf:name "Cathelyn Stark";
+    rel:belongs <Stark> .
 
 <#Ned_Stark>
     <Status> "dead";
     rel:marriedTo <#Cathelyn_Stark> ;
     a foaf:Person ; #a - jest typu
-    foaf:name "Ned Stark" .
+    foaf:name "Ned Stark";
+    rel:belongs <Stark> .
 
 <#Benjen_Stark>
     <Status> "dead";
     rel:friendOf <#Jon_Snow>;
     rel:siblingOf <#Ned_Stark>;
     a foaf:Person ;
-    foaf:name "Benjen Stark" .
+    foaf:name "Benjen Stark";
+    rel:belongs <Stark> .
 
 <#Jeor_Mormont>
     <Status> "dead";
@@ -30,7 +41,8 @@
     rel:commanderOf <#Samwell_Tarly>;
     rel:commanderOf <#Benjen_Stark>;
     a foaf:Person ;
-    foaf:name "Jeor Mormont" .
+    foaf:name "Jeor Mormont";
+    rel:belongs <Other> .
 
 <#Petyr_LittleFinger>
     <Status> "dead";
@@ -39,28 +51,32 @@
     rel:marriedTo <#Lysa_Aryn> ;
     rel:masterOfCoin <#Robert_Baratheon> ;
     a foaf:Person ;
-    foaf:name "Petyr LittleFinger" .
+    foaf:name "Petyr LittleFinger";
+    rel:belongs <Other> .
 
 <#Lysa_Aryn>
     <Status> "dead";
     rel:siblingOf <#Cathelyn_Stark> ;
     rel:marriedTo <#Petyr_LittleFinger> ;
     a foaf:Person ;
-    foaf:name "Lysa Aryn" .
+    foaf:name "Lysa Aryn";
+    rel:belongs <Other> .
 
 <#Rob_Stark>
     <Status> "dead";
     rel:kidOf <#Ned_Stark>;
     rel:kidOf <#Cathelyn_Stark>;
     a foaf:Person;
-    foaf:name "Rob Stark" .
+    foaf:name "Rob Stark";
+    rel:belongs <Stark> .
 
 <#Arya_Stark>
     <Status> "alive";
     rel:kidOf <#Ned_Stark>;
     rel:kidOf <#Cathelyn_Stark>;
     a foaf:Person;
-    foaf:name "Arya Stark".
+    foaf:name "Arya Stark";
+    rel:belongs <Stark>.
     
 <#Sansa_Stark>
     <Status> "alive";
@@ -69,21 +85,24 @@
     rel:kidOf <#Ned_Stark>;
     rel:kidOf <#Cathelyn_Stark>;
     a foaf:Person;
-    foaf:name "Sansa Stark".
+    foaf:name "Sansa Stark";
+    rel:belongs <Stark>.
 
 <#Rickon_Stark>
     <Status> "dead";
     rel:kidOf <#Ned_Stark>;
     rel:kidOf <#Cathelyn_Stark>;
     a foaf:Person;
-    foaf:name "Rickon Stark" .
+    foaf:name "Rickon Stark";
+    rel:belongs <Stark> .
         
 <#Bran_Stark>
     <Status> "dead";
     rel:kidOf <#Ned_Stark>;
     rel:kidOf <#Cathelyn_Stark>;
     a foaf:Person;
-    foaf:name "Bran Stark".
+    foaf:name "Bran Stark";
+    rel:belongs <Stark>.
 
 <#Jon_Snow>
     <Status> "alive";
@@ -94,53 +113,61 @@
     rel:inLoveWith <Daenerys_Targaryen>;
     rel:nephewOf <Daenerys_Targaryen>;
     a foaf:Person;
-    foaf:name "Jon Stark".
+    foaf:name "Jon Snow";
+    rel:belongs <Stark>.
     
 <#Night_King>
     <Status> "dead";
     rel:enemyOf <#Bran_Stark>;
     rel:killedBy <#Arya_Stark>;
     a foaf:Person ;
-    foaf:name "Night King" .
+    foaf:name "Night King";
+    rel:belongs <Other> .
 
 <#Hodor>
     <Status> "dead";
     rel:servantOf <#Bran_Stark>;
     rel:killedBy <#Night_King>;
     a foaf:Person ;
-    foaf:name "Hodor" .
+    foaf:name "Hodor";
+    rel:belongs <Other> .
 
 <#Samwell_Tarly>
     <Status> "alive";
     rel:friendOf <#Jon_Snow>;
     rel:killedBy <#Night_King>;
     a foaf:Person ;
-    foaf:name "Samwell Tarly" .
+    foaf:name "Samwell Tarly";
+    rel:belongs <Other> .
 
 <#The_Hound>
     <Status> "dead";
     rel:friendOf <#Arya_Stark>;
     rel:servantOf <#Joffrey_Baratheon>;
     a foaf:Person;
-    foaf:name "The Hound" .
+    foaf:name "The Hound";
+    rel:belongs <Other> .
 
 <#Daenerys_Targaryen>
     <Status> "dead";
     rel:siblingOf <#Viserys_Targaryen>;
     rel:marriedTo <#Khal_Drogo>;
     a foaf:Person;
-    foaf:name "Daenerys Targaryen" .
+    foaf:name "Daenerys Targaryen";
+    rel:belongs <Targaryen> .
 
 <#Khal_Drogo>
     <Status> "dead";
     rel:marriedTo <#Daenerys_Targaryen>;
     a foaf:Person;
-    foaf:name "Khal Drogo" .
+    foaf:name "Khal Drogo";
+    rel:belongs <Other> .
 
 <#Viserys_Targaryen>
     <Status> "dead";
     a foaf:Person;
-    foaf:name "Viserys Targaryen".
+    foaf:name "Viserys Targaryen";
+    rel:belongs <Targaryen>.
     
 <#Joffrey_Baratheon>
     <Status> "dead";
@@ -148,21 +175,24 @@
     rel:kidOf <#Robert_Baratheon>;
     rel:exFianceeOf <#Sansa_Stark>;
     a foaf:Person ;
-    foaf:name "Joffrey Baratheon" .
+    foaf:name "Joffrey Baratheon";
+    rel:belongs <Baratheon> .
 
 <#Robert_Baratheon>
     <Status> "dead";
     rel:marriedTo <#Cersei_Lannister>;
     rel:friendOf <#Ned_Stark>;
     a foaf:Person ;
-    foaf:name "Robert Baratheon" .
+    foaf:name "Robert Baratheon";
+    rel:belongs <Baratheon>.
 
 <#Gendry>
     <Status> "dead";
     rel:friendOf <#Arya_Stark>;
     rel:kidOf <#Robert_Baratheon>;
     a foaf:Person;
-    foaf:name "Gendry" .
+    foaf:name "Gendry" ;
+    rel:belongs <Other> .
 
 <#Cersei_Lannister>
     <Status> "dead";
@@ -171,7 +201,8 @@
     rel:siblingOf <#Jamie_Lannister>;
     rel:siblingOf <#Tyrion_Lannister>;
     a foaf:Person ;
-    foaf:name "Cersei Lannister" .
+    foaf:name "Cersei Lannister";
+    rel:belongs <Lannister> .
 
 <#Jamie_Lannister>
     <Status> "dead";
@@ -179,7 +210,8 @@
     rel:siblingOf <#Cersei_Lannister>;
     rel:siblingOf <#Tyrion_Lannister>;
     a foaf:Person;
-    foaf:name "Jamie Lannister" .
+    foaf:name "Jamie Lannister";
+    rel:belongs <Lannister> .
 
 <#Tyrion_Lannister>
     <Status> "alive";
@@ -187,4 +219,66 @@
     rel:siblingOf <#Cersei_Lannister>;
     rel:siblingOf <#Jamie_Lannister>;
     a foaf:Person;
-    foaf:name "Tyrion_Lannister" .
+    foaf:name "Tyrion_Lannister";
+    rel:belongs <Lannister>.
+
+
+<Stark>
+    a            type:House ;
+    rdf:name     "Stark"^^xsd:string ;
+    rdfs:label   "Stark" ;
+    rdfs:comment "The royal house of the Kingdom of the North." ;
+    rel:belongs  <Houses_of_Westeros> .
+
+<Lannister>
+    a            type:House ;
+    rdf:name     "Lannister"^^xsd:string ;
+    rdfs:label   "Lannister" ;
+    rdfs:comment "The Lannisters rule over the Westerlands. " ;
+    rel:belongs  <Houses_of_Westeros> .
+
+<Baratheon>
+    a            type:House ;
+    rdf:name     "Baratheon"^^xsd:string ;
+    rdfs:label   "Baratheon" ;
+    rdfs:comment "Traditionally rules the Stormlands on the eastern coast of Westeros" ;
+    rel:belongs  <Houses_of_Westeros> .
+
+<Targaryen>
+    a            type:House ;
+    rdf:name     "Targaryen"^^xsd:string ;
+    rdfs:label   "Targaryen" ;
+    rdfs:comment "It is an exiled Great House of Westeros and the former royal house of the Seven Kingdoms." ;
+    rel:belongs  <Houses_of_Westeros> .
+
+<Other>
+    a            type:House ;
+    rdf:name     "Other"^^xsd:string ;
+    rdfs:label   "Other" ;
+    rdfs:comment "Rest of houses of westeros combined together." ;
+    rel:belongs  <Houses_of_Westeros> .
+
+<Houses_of_Westeros>
+    a              type:Relation ;
+    rdf:name       "Houses_of_Westeros"^^xsd:string ;
+    rel:composedOf _:houses;
+    rdfs:label     "Houses_of_Westeros".
+
+_:houses
+    a      rdf:Bag ;
+    rdf:_1 <Stark> ;
+    rdf:_2 <Lannister> ;
+    rdf:_3 <Baratheon> ;
+    rdf:_4 <Targaryen> ;
+    rdf:_5 <Other> .
+
+type:Relation
+    a            rdfs:Class ;
+    rdfs:label   "Relation" ;
+    rdfs:comment "Relation defines blood relations between people that usually bear the same name." .
+
+type:House
+    a               rdfs:Class ;
+    rdfs:subClassOf type:Relation ;
+    rdfs:label      "House" ;
+    rdfs:comment    "House is one of the Houses of Westeros." .
