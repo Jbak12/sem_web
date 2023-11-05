@@ -1,0 +1,15 @@
+:Germany [http]	83695430
+:France [http]	67897000
+:United_Kingdom [http]	67791400
+:Italy [http]	61095551
+:Spain [http]	47163418
+:Ukraine [http]	41167336
+:Romania [http]	19038098
+:Belgium [http]	11584008
+:Czech_Republic [http]	10516707
+:Sweden [http]	10481937
+:Portugal [http]	10352042
+:Hungary [http]	9749763
+:Belarus [http]	9413505
+:Austria [http]	9027999
+:Switzerland [http]	8636896
