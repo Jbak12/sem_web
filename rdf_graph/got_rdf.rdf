@@ -1,0 +1,367 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rel:  <http://www.perceive.net/schemas/relationship/> .
+@prefix type: <http://www.perceive.net/schemas/type/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<http://uri/#Petyr_LittleFinger>
+        rdf:type            type:Noble , foaf:Person ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Petyr_Baelish> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Petyr_Baelish> ;
+        rel:belongs         <http://uri/Other> ;
+        rel:exLoverOf       <http://uri/#Sansa_Stark> , <http://uri/#Catelyn_Stark> ;
+        rel:marriedTo       <http://uri/#Lysa_Aryn> ;
+        rel:masterOfCoin    <http://uri/#Robert_Baratheon> ;
+        foaf:isAlive        false ;
+        foaf:name           "Petyr LittleFinger" ;
+        foaf:year_of_birth  "268"^^xsd:gYear .
+
+<http://uri/Westeros>
+        rdf:type        type:Kingdom ;
+        rdf:name        "Westeros" ;
+        rdfs:label      "Westeros" ;
+        rel:composedOf  ( "the crownlands" "Dorne" "the Iron Islands" "the north" "the Reach" "the riverlands" "the stormlands" "the Vale of Arryn" "the westerlands" ) ;
+        rel:composedOf  [ rdf:type  rdf:Bag ;
+                          rdf:_1    <http://uri/Stark> ;
+                          rdf:_2    <http://uri/Lannister> ;
+                          rdf:_3    <http://uri/Baratheon> ;
+                          rdf:_4    <http://uri/Targaryen> ;
+                          rdf:_5    <http://uri/Other>
+                        ] .
+
+<http://uri/#Jeor_Mormont>
+        rdf:type            foaf:Person , type:Noble ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Jeor_Mormont> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Jeor_Mormont> ;
+        rel:belongs         <http://uri/Other> ;
+        rel:commanderOf     <http://uri/#Jon_Snow> , <http://uri/#Benjen_Stark> , <http://uri/#Samwell_Tarly> ;
+        foaf:isAlive        false ;
+        foaf:name           "Jeor Mormont" ;
+        foaf:year_of_birth  "230"^^xsd:gYear .
+
+<http://uri/#Daenerys_Targaryen>
+        rdf:type            foaf:Person , type:Noble ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Daenerys_Targaryen> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Daenerys_Targaryen> ;
+        rel:belongs         <http://uri/Targaryen> ;
+        rel:marriedTo       <http://uri/#Khal_Drogo> ;
+        rel:siblingOf       <http://uri/#Viserys_Targaryen> ;
+        foaf:age            "16"^^xsd:decimal ;
+        foaf:isAlive        false ;
+        foaf:name           "Daenerys Targaryen" ;
+        foaf:year_of_birth  "284"^^xsd:gYear .
+
+<http://uri/#Arya_Stark>
+        rdf:type            foaf:Person , type:Noble ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Arya_Stark> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Arya_Stark> ;
+        rel:belongs         <http://uri/Stark> ;
+        rel:kidOf           <http://uri/#Ned_Stark> , <http://uri/#Catelyn_Stark> ;
+        foaf:age            "11"^^xsd:decimal ;
+        foaf:isAlive        true ;
+        foaf:name           "Arya Stark" ;
+        foaf:year_of_birth  "289"^^xsd:gYear .
+
+<http://uri/Baratheon>
+        rdf:type      type:House ;
+        rdf:name      "Baratheon" ;
+        rdfs:comment  "Traditionally rules the Stormlands on the eastern coast of Westeros" ;
+        rdfs:label    "Baratheon" ;
+        rel:belongs   <http://uri/Westeros> .
+
+<http://uri/#Joffrey_Baratheon>
+        rdf:type            type:Noble , foaf:Person ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Joffrey_Baratheon> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Joffrey_Baratheon> ;
+        rel:belongs         <http://uri/Baratheon> ;
+        rel:exFianceeOf     <http://uri/#Sansa_Stark> ;
+        rel:kidOf           <http://uri/#Robert_Baratheon> ;
+        rel:marriedTo       <http://uri/#Margery_Tyrell> ;
+        foaf:age            "16"^^xsd:decimal ;
+        foaf:isAlive        false ;
+        foaf:name           "Joffrey Baratheon" ;
+        foaf:year_of_birth  "282"^^xsd:gYear .
+
+<http://uri/#Samwell_Tarly>
+        rdf:type            foaf:Person , type:Noble ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Samwell_Tarly> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Samwell_Tarly> ;
+        rel:belongs         <http://uri/Other> ;
+        rel:friendOf        <http://uri/#Jon_Snow> ;
+        rel:killedBy        <http://uri/#Night_King> ;
+        foaf:isAlive        true ;
+        foaf:name           "Samwell Tarly" ;
+        foaf:year_of_birth  "283"^^xsd:gYear .
+
+<http://uri/#Night_King>
+        rdf:type          foaf:Person , type:Noble ;
+        rdfs:isDefinedBy  <https://en.wikipedia.org/wiki/Night_King> ;
+        rdfs:seeAlso      <https://gameofthrones.fandom.com/wiki/Night_King> ;
+        rel:belongs       <http://uri/Other> ;
+        rel:enemyOf       <http://uri/#Bran_Stark> ;
+        rel:killedBy      <http://uri/#Arya_Stark> ;
+        foaf:age          10.000 ;
+        foaf:isAlive      false ;
+        foaf:name         "Night King" .
+
+<http://uri/#Benjen_Stark>
+        rdf:type            type:Noble , foaf:Person ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Benjen_Stark> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Benjen_Stark> ;
+        rel:belongs         <http://uri/Stark> ;
+        rel:friendOf        <http://uri/#Jon_Snow> ;
+        rel:siblingOf       <http://uri/#Ned_Stark> ;
+        foaf:isAlive        false ;
+        foaf:name           "Benjen Stark" ;
+        foaf:year_of_birth  "267"^^xsd:gYear .
+
+<http://uri/Lannister>
+        rdf:type      type:House ;
+        rdf:name      "Lannister" ;
+        rdfs:comment  "The Lannisters rule over the Westerlands. " ;
+        rdfs:label    "Lannister" ;
+        rel:belongs   <http://uri/Westeros> .
+
+rel:belongs  rdf:type  rdfs:Property ;
+        rdfs:domain  type:Person ;
+        rdfs:range   type:House .
+
+<http://uri/#Cersei_Lannister>
+        rdf:type            foaf:Person , type:Noble ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Cersei_Lannister> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Cersei_Lannister> ;
+        rel:belongs         <http://uri/Lannister> ;
+        rel:lover           <http://uri/#Jamie_Lannister> ;
+        rel:marriedTo       <http://uri/#Robert_Baratheon> ;
+        rel:siblingOf       <http://uri/#Jamie_Lannister> , <http://uri/#Tyrion_Lannister> ;
+        foaf:age            "36"^^xsd:decimal ;
+        foaf:isAlive        false ;
+        foaf:name           "Cersei Lannister" ;
+        foaf:year_of_birth  "266"^^xsd:gYear .
+
+<http://uri/Stark>  rdf:type  type:House ;
+        rdf:name      "Stark" ;
+        rdfs:comment  "The royal house of the Kingdom of the North." ;
+        rdfs:label    "Stark" ;
+        rel:belongs   <http://uri/Westeros> .
+
+<http://uri/#The_Hound>
+        rdf:type            type:Peasant , foaf:Person ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/The_Hound> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/The_Hound> ;
+        rel:belongs         <http://uri/Other> ;
+        rel:friendOf        <http://uri/#Arya_Stark> ;
+        rel:servantOf       <http://uri/#Joffrey_Baratheon> ;
+        foaf:age            "40"^^xsd:decimal ;
+        foaf:isAlive        false ;
+        foaf:name           "The Hound" ;
+        foaf:year_of_birth  "265"^^xsd:gYear .
+
+rel:composedOf  rdf:type  rdfs:Property ;
+        rdfs:domain  type:House ;
+        rdfs:range   rdf:List , rdfs:Container .
+
+<http://uri/#Robert_Baratheon>
+        rdf:type            type:Noble , foaf:Person ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Robert_Baratheon> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Robert_Baratheon> ;
+        rel:belongs         <http://uri/Baratheon> ;
+        rel:friendOf        <http://uri/#Ned_Stark> ;
+        rel:marriedTo       <http://uri/#Cersei_Lannister> ;
+        foaf:age            "42"^^xsd:decimal ;
+        foaf:isAlive        false ;
+        foaf:name           "Robert Baratheon" ;
+        foaf:year_of_birth  "263"^^xsd:gYear .
+
+<http://uri/#Khal_Drogo>
+        rdf:type            type:Noble , foaf:Person ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Khal_Drogo> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Khal_Drogo> ;
+        rel:belongs         <http://uri/Other> ;
+        rel:marriedTo       <http://uri/#Daenerys_Targaryen> ;
+        foaf:age            "32"^^xsd:decimal ;
+        foaf:isAlive        false ;
+        foaf:name           "Khal Drogo" ;
+        foaf:year_of_birth  "266"^^xsd:gYear .
+
+<http://uri/#Viserys_Targaryen>
+        rdf:type            foaf:Person , type:Noble ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Viserys_Targaryen> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Viserys_Targaryen> ;
+        rel:belongs         <http://uri/Targaryen> ;
+        foaf:age            "22"^^xsd:decimal ;
+        foaf:isAlive        false ;
+        foaf:name           "Viserys Targaryen" ;
+        foaf:year_of_birth  "63"^^xsd:gYear .
+
+<http://uri/#Bran_Stark>
+        rdf:type            foaf:Person , type:Noble ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Bran_Stark> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Bran_Stark> ;
+        rel:belongs         <http://uri/Stark> ;
+        rel:kidOf           <http://uri/#Ned_Stark> , <http://uri/#Catelyn_Stark> ;
+        foaf:age            "10"^^xsd:decimal ;
+        foaf:isAlive        true ;
+        foaf:name           "Bran Stark" ;
+        foaf:year_of_birth  "290"^^xsd:gYear .
+
+<http://uri/#Sansa_Stark>
+        rdf:type            foaf:Person , type:Noble ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Sansa_Stark> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Sansa_Stark> ;
+        rel:belongs         <http://uri/Stark> ;
+        rel:exFianceeOf     <http://uri/#Joffrey_Baratheon> ;
+        rel:exSpouseOf      <http://uri/#Tyrion_Lannister> ;
+        rel:kidOf           <http://uri/#Ned_Stark> , <http://uri/#Catelyn_Stark> ;
+        foaf:age            "13"^^xsd:decimal ;
+        foaf:isAlive        true ;
+        foaf:name           "Sansa Stark" ;
+        foaf:year_of_birth  "286"^^xsd:gYear .
+
+<http://uri/#Rickon_Stark>
+        rdf:type            type:Noble , foaf:Person ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Rickon_Stark> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Rickon_Stark> ;
+        rel:belongs         <http://uri/Stark> ;
+        rel:kidOf           <http://uri/#Ned_Stark> , <http://uri/#Catelyn_Stark> ;
+        foaf:age            "6"^^xsd:decimal ;
+        foaf:isAlive        false ;
+        foaf:name           "Rickon Stark" ;
+        foaf:year_of_birth  "295"^^xsd:gYear .
+
+<http://uri/#Jon_Snow>
+        rdf:type            foaf:Person , type:Noble ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Jon_Snow> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Jon_Snow> ;
+        rel:belongs         <http://uri/Stark> ;
+        rel:inLoveWith      <http://uri/Daenerys_Targaryen> ;
+        rel:kills           <http://uri/Daenerys_Targaryen> ;
+        rel:nephewOf        <http://uri/Daenerys_Targaryen> , <http://uri/#Ned_Stark> ;
+        rel:stepSon         <http://uri/#Catelyn_Stark> ;
+        rel:stepSonOf       <http://uri/#Ned_Stark> ;
+        foaf:age            "17"^^xsd:decimal ;
+        foaf:isAlive        true ;
+        foaf:name           "Jon Snow" ;
+        foaf:year_of_birth  "281"^^xsd:gYear .
+
+<http://uri/#Gendry>  rdf:type  foaf:Person , type:Peasant ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Gendry> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Gendry> ;
+        rel:belongs         <http://uri/Other> ;
+        rel:friendOf        <http://uri/#Arya_Stark> ;
+        rel:kidOf           <http://uri/#Robert_Baratheon> ;
+        foaf:age            "20"^^xsd:decimal ;
+        foaf:isAlive        false ;
+        foaf:name           "Gendry" ;
+        foaf:year_of_birth  "282"^^xsd:gYear .
+
+<http://uri/#Catelyn_Stark>
+        rdf:type            type:Noble , foaf:Person ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Catelyn_Stark> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Catelyn_Stark> ;
+        rel:belongs         <http://uri/Stark> ;
+        rel:marriedTo       <http://uri/#Ned_Stark> ;
+        rel:siblingOf       <http://uri/#Lysa_Aryn> ;
+        foaf:age            "40"^^xsd:decimal ;
+        foaf:isAlive        false ;
+        foaf:name           "Catelyn Stark" ;
+        foaf:year_of_birth  "264"^^xsd:gYear .
+
+<http://uri/Targaryen>
+        rdf:type      type:House ;
+        rdf:name      "Targaryen" ;
+        rdfs:comment  "It is an exiled Great House of Westeros and the former royal house of the Seven Kingdoms." ;
+        rdfs:label    "Targaryen" ;
+        rel:belongs   <http://uri/Westeros> .
+
+<http://uri/#Lysa_Aryn>
+        rdf:type            type:Noble , foaf:Person ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Lysa_Aryn> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Lysa_Aryn> ;
+        rel:belongs         <http://uri/Other> ;
+        rel:marriedTo       <http://uri/#Petyr_LittleFinger> ;
+        rel:siblingOf       <http://uri/#Catelyn_Stark> ;
+        foaf:isAlive        false ;
+        foaf:name           "Lysa Aryn" ;
+        foaf:year_of_birth  "266"^^xsd:gYear .
+
+<http://uri/#Hodor>  rdf:type  foaf:Person , type:Peasant ;
+        rdfs:isDefinedBy  <https://en.wikipedia.org/wiki/Hodor> ;
+        rdfs:seeAlso      <https://gameofthrones.fandom.com/wiki/Hodor> ;
+        rel:belongs       <http://uri/Other> ;
+        rel:killedBy      <http://uri/#Night_King> ;
+        rel:servantOf     <http://uri/#Bran_Stark> ;
+        foaf:isAlive      false ;
+        foaf:name         "Hodor" .
+
+type:Noble  rdf:type     rdfs:Class ;
+        rdfs:comment     "Nobles held positions of authority and power in society." ;
+        rdfs:label       "Noble" ;
+        rdfs:subClassOf  foaf:Person .
+
+<http://uri/#Ned_Stark>
+        rdf:type            foaf:Person , type:Noble ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Ned_Stark> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Ned_Stark> ;
+        rel:belongs         <http://uri/Stark> ;
+        rel:marriedTo       <http://uri/#Catelyn_Stark> ;
+        foaf:age            "40"^^xsd:decimal ;
+        foaf:isAlive        false ;
+        foaf:name           "Ned Stark" ;
+        foaf:year_of_birth  "263"^^xsd:gYear .
+
+<http://uri/#Tyrion_Lannister>
+        rdf:type            foaf:Person , type:Noble ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Tyrion_Lannister> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Tyrion_Lannister> ;
+        rel:belongs         <http://uri/Lannister> ;
+        rel:exSpouseOf      <http://uri/#Sansa_Stark> ;
+        rel:siblingOf       <http://uri/#Jamie_Lannister> , <http://uri/#Cersei_Lannister> ;
+        foaf:age            "32"^^xsd:decimal ;
+        foaf:isAlive        true ;
+        foaf:name           "Tyrion_Lannister" ;
+        foaf:year_of_birth  "265"^^xsd:gYear .
+
+<http://uri/Other>  rdf:type  type:House ;
+        rdf:name      "Other" ;
+        rdfs:comment  "Rest of houses of westeros combined together." ;
+        rdfs:label    "Other" ;
+        rel:belongs   <http://uri/Westeros> .
+
+<http://uri/#Jamie_Lannister>
+        rdf:type            foaf:Person , type:Noble ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Jamie_Lannister> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Jamie_Lannister> ;
+        rel:belongs         <http://uri/Lannister> ;
+        rel:lover           <http://uri/#Cersei_Lannister> ;
+        rel:siblingOf       <http://uri/#Tyrion_Lannister> , <http://uri/#Cersei_Lannister> ;
+        foaf:age            "36"^^xsd:decimal ;
+        foaf:isAlive        false ;
+        foaf:name           "Jamie Lannister" ;
+        foaf:year_of_birth  "261"^^xsd:gYear .
+
+type:Peasant  rdf:type   rdfs:Class ;
+        rdfs:comment     "Peasants were at the lower end of the social hierarchy and had limited rights and autonomy." ;
+        rdfs:label       "Peasant" ;
+        rdfs:subClassOf  foaf:Person .
+
+type:House  rdf:type     rdfs:Class ;
+        rdfs:comment     "House is one of the Houses of Westeros." ;
+        rdfs:label       "House" ;
+        rdfs:subClassOf  type:Relation .
+
+<http://uri/#Rob_Stark>
+        rdf:type            foaf:Person , type:Noble ;
+        rdfs:isDefinedBy    <https://en.wikipedia.org/wiki/Rob_Stark> ;
+        rdfs:seeAlso        <https://gameofthrones.fandom.com/wiki/Rob_Stark> ;
+        rel:belongs         <http://uri/Stark> ;
+        rel:kidOf           <http://uri/#Ned_Stark> , <http://uri/#Catelyn_Stark> ;
+        foaf:age            "17"^^xsd:decimal ;
+        foaf:isAlive        false ;
+        foaf:name           "Rob Stark" ;
+        foaf:year_of_birth  "283"^^xsd:gYear .
+
+type:Kingdom  rdf:type  rdfs:Class ;
+        rdfs:comment  "Kingdom defines a part of land." ;
+        rdfs:label    "Kingdom" .
