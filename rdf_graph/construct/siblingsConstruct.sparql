@@ -1,0 +1,11 @@
+PREFIX rel: <http://www.perceive.net/schemas/relationship/> 
+PREFIX type: <http://www.perceive.net/schemas/type/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+ 
+CONSTRUCT {
+  ?sib1 rel:siblingOf: ?sib2 .
+}
+WHERE {
+  ?sib2 rel:siblingOf ?sib1
+}

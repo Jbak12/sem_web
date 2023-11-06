@@ -1,0 +1,32 @@
+#lines generated using sparql construct
+<http://uri/#Ned_Stark>
+        rel:parentOf  <http://uri/#Rickon_Stark> , <http://uri/#Sansa_Stark> , <http://uri/#Arya_Stark> , <http://uri/#Bran_Stark> , <http://uri/#Rob_Stark> .
+
+<http://uri/#Robert_Baratheon>
+        rel:parentOf  <http://uri/#Gendry> , <http://uri/#Joffrey_Baratheon> .
+
+<http://uri/#Catelyn_Stark>
+        rel:parentOf  <http://uri/#Rickon_Stark> , <http://uri/#Sansa_Stark> , <http://uri/#Arya_Stark> , <http://uri/#Bran_Stark> , <http://uri/#Rob_Stark> .
+
+
+
+<http://uri/#Catelyn_Stark>
+        rel:siblingOf:  <http://uri/#Lysa_Aryn> .
+
+<http://uri/#Cersei_Lannister>
+        rel:siblingOf:  <http://uri/#Tyrion_Lannister> , <http://uri/#Jamie_Lannister> .
+
+<http://uri/#Lysa_Aryn>
+        rel:siblingOf:  <http://uri/#Catelyn_Stark> .
+
+<http://uri/#Ned_Stark>
+        rel:siblingOf:  <http://uri/#Benjen_Stark> .
+
+<http://uri/#Tyrion_Lannister>
+        rel:siblingOf:  <http://uri/#Cersei_Lannister> , <http://uri/#Jamie_Lannister> .
+
+<http://uri/#Jamie_Lannister>
+        rel:siblingOf:  <http://uri/#Tyrion_Lannister> , <http://uri/#Cersei_Lannister> .
+
+<http://uri/#Viserys_Targaryen>
+        rel:siblingOf:  <http://uri/#Daenerys_Targaryen> .

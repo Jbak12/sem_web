@@ -1,0 +1,26 @@
+--------------------------------------------
+| who                              | alive |
+============================================
+| <http://uri/#Petyr_LittleFinger> | false |
+| <http://uri/#Viserys_Targaryen>  | false |
+| <http://uri/#Sansa_Stark>        | true  |
+| <http://uri/#Ned_Stark>          | false |
+| <http://uri/#Lysa_Aryn>          | false |
+| <http://uri/#Robert_Baratheon>   | false |
+| <http://uri/#Cersei_Lannister>   | false |
+| <http://uri/#Rickon_Stark>       | false |
+| <http://uri/#Khal_Drogo>         | false |
+| <http://uri/#Joffrey_Baratheon>  | false |
+| <http://uri/#Night_King>         | false |
+| <http://uri/#Bran_Stark>         | true  |
+| <http://uri/#Catelyn_Stark>      | false |
+| <http://uri/#Samwell_Tarly>      | true  |
+| <http://uri/#Jamie_Lannister>    | false |
+| <http://uri/#Jon_Snow>           | true  |
+| <http://uri/#Tyrion_Lannister>   | true  |
+| <http://uri/#Jeor_Mormont>       | false |
+| <http://uri/#Daenerys_Targaryen> | false |
+| <http://uri/#Rob_Stark>          | false |
+| <http://uri/#Arya_Stark>         | true  |
+| <http://uri/#Benjen_Stark>       | false |
+--------------------------------------------
