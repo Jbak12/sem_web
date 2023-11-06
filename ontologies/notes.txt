@@ -1,0 +1,15 @@
+Scope: King's Landing
+Competency questions:
+- What are the connections between Cersei and Jamie Lannisters?
+- What happend with Cersei in the Great Sept of Baelor?
+- Who trapped Sansa in King's Castle?
+
+List of existing classes and properties that we will use in your ontology :
+http://www.productontology.org/doc/Game_of_Thrones
+
+Important terms that you will use to build your ontology:
+- houses (Starks, ect)
+- castle, great sept, castle gardens, harbour
+- relations between people (married, siblings, ...)
+- crimes commited (poison, kidnapped, slaughtered, burned ect)
+- social statuses / functions
