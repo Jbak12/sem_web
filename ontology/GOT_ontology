@@ -1,0 +1,584 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#"
+     xml:base="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#isRepresentedBy -->
+
+    <owl:ObjectProperty rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#isRepresentedBy"/>
+    
+
+
+    <!-- urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#isRuledBy -->
+
+    <owl:ObjectProperty rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#isRuledBy"/>
+    
+
+
+    <!-- urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#rules -->
+
+    <owl:ObjectProperty rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#rules"/>
+    
+
+
+    <!-- urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#wasKilledBy -->
+
+    <owl:ObjectProperty rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#wasKilledBy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#age -->
+
+    <owl:DatatypeProperty rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#age"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://1670/Family -->
+
+    <owl:Class rdf:about="http://1670/Family">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">Family</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://1670/KingdomOfMountainAndVale -->
+
+    <owl:Class rdf:about="http://1670/KingdomOfMountainAndVale">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#isRuledBy"/>
+                <owl:someValuesFrom rdf:resource="http://GOT/HouseArryn"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://1670/Place"/>
+        <rdfs:label xml:lang="en">Kingdom of Mountain and Vale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://1670/KingdomOfTheIslesandtheRivers -->
+
+    <owl:Class rdf:about="http://1670/KingdomOfTheIslesandtheRivers">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#isRuledBy"/>
+                <owl:someValuesFrom rdf:resource="http://GOT/HouseGreyjoy"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://1670/Place"/>
+        <rdfs:label xml:lang="en">Kingdom of the Isles and the Rivers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://1670/KingdomOfTheNorth -->
+
+    <owl:Class rdf:about="http://1670/KingdomOfTheNorth">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#isRuledBy"/>
+                <owl:someValuesFrom rdf:resource="http://GOT/HouseStark"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://1670/Place"/>
+        <rdfs:label xml:lang="en">Kingdom of the North</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://1670/KingdomOfTheReach -->
+
+    <owl:Class rdf:about="http://1670/KingdomOfTheReach">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#isRuledBy"/>
+                <owl:someValuesFrom rdf:resource="http://GOT/HouseTyrell"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://1670/Place"/>
+        <rdfs:label xml:lang="en">Kingdom of the Reach</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://1670/KingdomOfTheRock -->
+
+    <owl:Class rdf:about="http://1670/KingdomOfTheRock">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#isRuledBy"/>
+                <owl:someValuesFrom rdf:resource="http://GOT/HouseLannister"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://1670/Place"/>
+        <rdfs:label xml:lang="en">Kingdom of the Rock</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://1670/KingdomOfTheStormlands -->
+
+    <owl:Class rdf:about="http://1670/KingdomOfTheStormlands">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#isRuledBy"/>
+                <owl:someValuesFrom rdf:resource="http://GOT/HouseBaratheon"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://1670/Place"/>
+        <rdfs:label xml:lang="en">Kingdom of the Stormlands</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://1670/People -->
+
+    <owl:Class rdf:about="http://1670/People">
+        <rdfs:subClassOf rdf:resource="http://GOT/Characters"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#age"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://1670/Place -->
+
+    <owl:Class rdf:about="http://1670/Place">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">Place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://GOT/BeyondTheWall -->
+
+    <owl:Class rdf:about="http://GOT/BeyondTheWall">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#isRuledBy"/>
+                <owl:someValuesFrom rdf:resource="http://GOT/HouseStark"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://1670/Place"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#isRuledBy"/>
+                <owl:someValuesFrom rdf:resource="http://1670/Family"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Beyond the Wall</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://GOT/Characters -->
+
+    <owl:Class rdf:about="http://GOT/Characters">
+        <rdfs:label xml:lang="en">Characters</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://GOT/Dorne -->
+
+    <owl:Class rdf:about="http://GOT/Dorne">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#isRuledBy"/>
+                <owl:someValuesFrom rdf:resource="http://GOT/HouseMartell"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://1670/Place"/>
+        <rdfs:label xml:lang="en">Dorne</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://GOT/Dragons -->
+
+    <owl:Class rdf:about="http://GOT/Dragons">
+        <rdfs:subClassOf rdf:resource="http://GOT/Characters"/>
+        <rdfs:label xml:lang="en">Dragons</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://GOT/FreeFolk -->
+
+    <owl:Class rdf:about="http://GOT/FreeFolk">
+        <rdfs:subClassOf rdf:resource="http://GOT/Characters"/>
+        <rdfs:label xml:lang="en">Free Folk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://GOT/HouseArryn -->
+
+    <owl:Class rdf:about="http://GOT/HouseArryn">
+        <rdfs:subClassOf rdf:resource="http://1670/Family"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#isRepresentedBy"/>
+                <owl:someValuesFrom rdf:resource="http://1670/People"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">House Arryn</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://GOT/HouseBaratheon -->
+
+    <owl:Class rdf:about="http://GOT/HouseBaratheon">
+        <rdfs:subClassOf rdf:resource="http://1670/Family"/>
+        <rdfs:label xml:lang="en">House Baratheon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://GOT/HouseGreyjoy -->
+
+    <owl:Class rdf:about="http://GOT/HouseGreyjoy">
+        <rdfs:subClassOf rdf:resource="http://1670/Family"/>
+        <rdfs:label xml:lang="en">House Greyjoy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://GOT/HouseLannister -->
+
+    <owl:Class rdf:about="http://GOT/HouseLannister">
+        <rdfs:subClassOf rdf:resource="http://1670/Family"/>
+        <rdfs:label xml:lang="en">House Lannister</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://GOT/HouseMartell -->
+
+    <owl:Class rdf:about="http://GOT/HouseMartell">
+        <rdfs:subClassOf rdf:resource="http://1670/Family"/>
+        <rdfs:label xml:lang="en">House Martell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://GOT/HouseStark -->
+
+    <owl:Class rdf:about="http://GOT/HouseStark">
+        <rdfs:subClassOf rdf:resource="http://1670/Family"/>
+        <rdfs:label xml:lang="en">House Stark</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://GOT/HouseTyrell -->
+
+    <owl:Class rdf:about="http://GOT/HouseTyrell">
+        <rdfs:subClassOf rdf:resource="http://1670/Family"/>
+        <rdfs:label xml:lang="en">House Tyrell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://GOT/KingsLanding -->
+
+    <owl:Class rdf:about="http://GOT/KingsLanding">
+        <rdfs:subClassOf rdf:resource="http://1670/Place"/>
+        <rdfs:label xml:lang="en">Kings Landing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://GOT/TheWall -->
+
+    <owl:Class rdf:about="http://GOT/TheWall">
+        <rdfs:subClassOf rdf:resource="http://1670/KingdomOfTheNorth"/>
+        <rdfs:label xml:lang="en">The Wall</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://GOT/WhiteWalkers -->
+
+    <owl:Class rdf:about="http://GOT/WhiteWalkers">
+        <rdfs:subClassOf rdf:resource="http://GOT/Characters"/>
+        <rdfs:label xml:lang="en">WhiteWalkers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://GOT/Winterfell -->
+
+    <owl:Class rdf:about="http://GOT/Winterfell">
+        <rdfs:subClassOf rdf:resource="http://1670/KingdomOfTheNorth"/>
+        <rdfs:label xml:lang="en">Winterfell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Alive -->
+
+    <owl:Class rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Alive">
+        <rdfs:subClassOf rdf:resource="http://1670/People"/>
+        <rdfs:subClassOf rdf:resource="http://GOT/Dragons"/>
+        <rdfs:subClassOf rdf:resource="http://GOT/FreeFolk"/>
+        <rdfs:subClassOf rdf:resource="http://GOT/WhiteWalkers"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Dead -->
+
+    <owl:Class rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Dead">
+        <rdfs:subClassOf rdf:resource="http://1670/People"/>
+        <rdfs:subClassOf rdf:resource="http://GOT/Dragons"/>
+        <rdfs:subClassOf rdf:resource="http://GOT/FreeFolk"/>
+        <rdfs:subClassOf rdf:resource="http://GOT/WhiteWalkers"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#wasKilledBy"/>
+                <owl:someValuesFrom rdf:resource="http://GOT/Characters"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Government -->
+
+    <owl:Class rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Government"/>
+    
+
+
+    <!-- urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Grand_Maester -->
+
+    <owl:Class rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Grand_Maester">
+        <rdfs:subClassOf rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Government"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#King -->
+
+    <owl:Class rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#King">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#rules"/>
+                <owl:someValuesFrom rdf:resource="http://GOT/KingsLanding"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Government"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#rules"/>
+                <owl:allValuesFrom rdf:resource="http://1670/Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Kings_Council -->
+
+    <owl:Class rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Kings_Council">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Grand_Maester"/>
+                    <rdf:Description rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Kings_Hand"/>
+                    <rdf:Description rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Master_Of_Coin"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Government"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Kings_Hand -->
+
+    <owl:Class rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Kings_Hand">
+        <rdfs:subClassOf rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Government"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Lord_Commander_of_the_KingsGuard -->
+
+    <owl:Class rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Lord_Commander_of_the_KingsGuard">
+        <rdfs:subClassOf rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Government"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Master_Of_Coin -->
+
+    <owl:Class rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Master_Of_Coin">
+        <rdfs:subClassOf rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Government"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#No_House -->
+
+    <owl:Class rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#No_House">
+        <rdfs:subClassOf rdf:resource="http://1670/Family"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Red_Keep -->
+
+    <owl:Class rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Red_Keep">
+        <rdfs:subClassOf rdf:resource="http://GOT/KingsLanding"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://GOT/AryaStark -->
+
+    <owl:NamedIndividual rdf:about="http://GOT/AryaStark">
+        <rdf:type rdf:resource="http://1670/People"/>
+        <rdf:type rdf:resource="http://GOT/HouseStark"/>
+        <rdf:type rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Alive"/>
+        <rdfs:label xml:lang="en">Arya Stark</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://GOT/RobStark -->
+
+    <owl:NamedIndividual rdf:about="http://GOT/RobStark">
+        <rdf:type rdf:resource="http://1670/People"/>
+        <rdf:type rdf:resource="http://GOT/HouseStark"/>
+        <rdf:type rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Dead"/>
+        <rdfs:label xml:lang="en">Rob Stark</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://GOT/SansaStark -->
+
+    <owl:NamedIndividual rdf:about="http://GOT/SansaStark">
+        <rdf:type rdf:resource="http://1670/People"/>
+        <rdf:type rdf:resource="http://GOT/HouseStark"/>
+        <rdf:type rdf:resource="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#Alive"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://1670/Family"/>
+            <rdf:Description rdf:about="http://GOT/Dragons"/>
+            <rdf:Description rdf:about="http://GOT/FreeFolk"/>
+            <rdf:Description rdf:about="http://GOT/WhiteWalkers"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://1670/KingdomOfMountainAndVale"/>
+            <rdf:Description rdf:about="http://1670/KingdomOfTheIslesandtheRivers"/>
+            <rdf:Description rdf:about="http://1670/KingdomOfTheNorth"/>
+            <rdf:Description rdf:about="http://1670/KingdomOfTheReach"/>
+            <rdf:Description rdf:about="http://1670/KingdomOfTheRock"/>
+            <rdf:Description rdf:about="http://1670/KingdomOfTheStormlands"/>
+            <rdf:Description rdf:about="http://GOT/BeyondTheWall"/>
+            <rdf:Description rdf:about="http://GOT/Dorne"/>
+            <rdf:Description rdf:about="http://GOT/KingsLanding"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://GOT/HouseArryn"/>
+            <rdf:Description rdf:about="http://GOT/HouseBaratheon"/>
+            <rdf:Description rdf:about="http://GOT/HouseGreyjoy"/>
+            <rdf:Description rdf:about="http://GOT/HouseLannister"/>
+            <rdf:Description rdf:about="http://GOT/HouseMartell"/>
+            <rdf:Description rdf:about="http://GOT/HouseStark"/>
+            <rdf:Description rdf:about="http://GOT/HouseTyrell"/>
+            <rdf:Description rdf:about="urn:webprotege:ontology:934fad33-9259-4bd3-a84a-94d695d14aa8#No_House"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
